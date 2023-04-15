@@ -6,8 +6,12 @@ project:
 # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. 
 # Source files must be in ./src and you must list each source file separately
   source_files:        
-    - counter.v
-    - decoder.v
+    - hpretl_tt03_temperature_sensor.v
+    - tempsense.v
+    - seg7.v
+    - delay_cell.v
+    - vdac.v
+    - vdac_cell.v
   top_module:  "hpretl_tt03_temperature_sensor"      # put the name of your top module here, make it unique by prepending your github username
 
 # Keep a track of the submission yaml
@@ -19,31 +23,46 @@ yaml_version: 3.0
 # Here is a great example: https://github.com/davidsiaw/tt02-davidsiaw-stackcalc/blob/38c5647f83aad2aec675d566aa3d67b98f0aac81/info.yaml
 documentation: 
   author:       "Harald Pretl"
-  title:        "Temperature Sensor"
+  title:        "Synthesizable Digital Temperature Sensor"
   language:     "Verilog"
-  description:  "Measure the temperature by creating a temperature-dependant output clock signal."
+  description:  "Measure the on-chip temperature by creating a temperature-dependent PWM output signal."
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
-      Uses a set of registers to divide the clock, and then some combinational logic
-      to convert from binary to decimal for the display.
+      By creatively twisting the use of a tristate-inverter (EINVP) a voltage DAC is built. This
+      voltage-mode DAC is used in another twisted arrangement of an EINVP to bias an NMOS into
+      subthreshold operation to discharge a pre-charged capacitor (the input capacitor of an inverter).
+      Since the subthreshold current of a MOSFET is a strong function of temperature, the resulting
+      delay time is also a strong function of temperature, thus a digital temperature sensor is built.
 
-      Puts a slower square wave output on output 7.
+      The temperature-dependent digital signal is output at the LED dot (io_out[7]).
+
+      io_in[0] is used as a CLK signal, and io_in[1] is used a RESET.
+
+      io_in[7:3] is the 5b DAC code which is applied during the temperature measurement.
+
+      io_in[2] selects whether a full clock cycle is spent in state (0), or the TRANSITION cycle is only
+      a few inverter delays (1).
+
+      The state of the internal state machine is shown at the 7-segment LED (0 = RESET, 1 = PRECHARGE,
+      2 = TRANSITION, 3 = MEASUREMENT).
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-      After reset, the counter should increase by one every second.
+      After reset, a period signal with a time-dependent duty cycle is output at io_out[7].
+
+      The inputs at io_in[7:3] can be used to calibrate the time delay as a function of temperature (lower code means longer delay).
 
 # A description of what the inputs do
   inputs:               
     - clock
     - reset
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - en_quick_transition
+    - dac[0]
+    - dac[1]
+    - dac[2]
+    - dac[3]
+    - dac[4]
 # A description of what the outputs do
   outputs:
     - segment a
@@ -53,12 +72,12 @@ documentation:
     - segment e
     - segment f
     - segment g
-    - slow clock output
+    - temperature-dependant duty-cycle signal
 
 # The following fields are optional
-  tag:          "timer, test"      # comma separated list of tags: test encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
+  tag:          "pwm, sensor, temperature"      # comma separated list of tags: test encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
   external_hw:  ""      # Describe any external hardware needed
   discord:      ""      # Your discord handle, used for communication and automatically assigning tapeout role after a submission
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
-  clock_hz:     1000       # Clock frequency in Hz (if required)
+  clock_hz:     10000   # Clock frequency in Hz (if required)
   picture:      ""      # relative path to a picture in your repository
