@@ -1,35 +1,21 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg)
 
-# What is Tiny Tapeout?
+# Synthesizable Digital Temperature Sensor
 
-TinyTapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip!
+(c) 2023 **Harald Pretl and Manuel Moser**, Insitute for Integrated Circuits, Johannes Kepler University, Linz, Austria
 
-Go to https://tinytapeout.com for instructions!
+This design is intended for inclusion on **the Tiny Tapeout 03** from Matt Venn.
 
-## How to change the Wokwi project
+## What does it do?
 
-Edit the [info.yaml](info.yaml) and change the wokwi_id to match your project.
+If a clock signal (nominal 10kHz) is applied, then a period PWM signal is created and output where the duty-cycle is a (nonlinear) function of the on-chip temperature.
 
-## How to enable the GitHub actions to build the ASIC files
-
-Please see the instructions for:
-
-* [Enabling GitHub Actions](https://tinytapeout.com/faq/#when-i-commit-my-change-the-gds-action-isnt-running)
-* [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
+By using a calibration, the temperature reading can be re-constructed from this PWM signal.
 
 ## How does it work?
 
-When you edit the info.yaml to choose a different ID, the [GitHub Action](.github/workflows/gds.yaml) will fetch the digital netlist of your design from Wokwi.
+TBD
 
-After that, the action uses the open source ASIC tool called [OpenLane](https://www.zerotoasiccourse.com/terminology/openlane/) to build the files needed to fabricate an ASIC.
+## Usage
 
-## Resources
-
-* [FAQ](https://tinytapeout.com/faq/)
-* [Digital design lessons](https://tinytapeout.com/digital_design/)
-* [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
-* [Join the community](https://discord.gg/rPK2nSjxy8)
-
-## What next?
-
-* Share your GDS on Twitter, tag it [#tinytapeout](https://twitter.com/hashtag/tinytapeout?src=hashtag_click) and [link me](https://twitter.com/matthewvenn)!
+TBD
