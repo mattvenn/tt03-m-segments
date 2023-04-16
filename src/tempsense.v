@@ -16,7 +16,7 @@
 `define __TEMPSENSE__
 
 `default_nettype none
-`timescale 1ns/1ps
+`timescale 1us/1ps
 `ifndef SIMULATION
 `include "vdac.v"
 `endif
@@ -31,11 +31,13 @@ module tempsense #( parameter DAC_RESOLUTION = 6, parameter CAP_LOAD = 3 )(
   );
 
 `ifdef SIMULATION
-      integer capstate;
-      
-      wire precharge_del_n;
-      assign #300 precharge_del_n = i_precharge_n;
-      assign o_tempdelay = i_dac_en & (~precharge_del_n);
+      wire dac0, dac1, dac_change;
+      assign dac0 = ~|i_dac_data;
+      assign dac1 = &i_dac_data;
+
+      assign #50 dac_change = ~dac0 & ~dac1;
+
+      assign o_tempdelay = ~(i_dac_en & dac_change & i_precharge_n);
 `else
       // Voltage-mode digital-to-analog converter (VDAC)
       wire dac_vout_ana_;
