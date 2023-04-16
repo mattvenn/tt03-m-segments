@@ -98,7 +98,7 @@ N 1580 -540 1920 -540 {
 lab=state0}
 N 1920 -540 1920 -340 {
 lab=state0}
-C {devices/title.sym} 160 -30 0 0 {name=l1 author="Harald Pretl, Institute for Integrated Circuits, Johannes Kepler University"}
+C {devices/title.sym} 160 -30 0 0 {name=l1 author="Harald Pretl, IIC @ JKU"}
 C {devices/vsource.sym} 60 -280 0 0 {name=VDD1 value=1.8}
 C {devices/vdd.sym} 60 -320 0 0 {name=l2 lab=VDD}
 C {devices/gnd.sym} 60 -230 0 0 {name=l3 lab=GND}
@@ -131,7 +131,7 @@ value="
 set num_threads=6
 tran 1n 0.5m
 
-plot clk rst pwm_out
+plot clk rst pwm_out state0 state1
 
 set wr_vecnames
 write tb_tempsens.raw clk rst en_qutrans ts_cfg4 ts_cfg3 ts_cfg2 ts_cfg1 ts_cfg0 state0 state1 pwm_out
