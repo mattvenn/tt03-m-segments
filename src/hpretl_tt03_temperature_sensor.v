@@ -40,16 +40,14 @@ module hpretl_tt03_temperature_sensor (
 
 	// definition of external outputs
 	wire [6:0] led_out;
-	wire temp_pwm_out;
-	assign io_out[6:0] = led_out;
+	wire temp_pwm_out, temp_delay;
+	assign io_out[6:0] = {in_measurement, in_transition_ph2, in_transition_ph1, in_transition_ph0, in_transition, in_precharge, in_reset};
 	assign io_out[7] = temp_pwm_out;
 
 	// definition of internal wires and regs
     wire tempsens_en;
-	wire measure_early;
-	wire transition;
-	wire transition_phase1;
-	wire transition_phase2;
+	wire transition_del1, transition_del2;
+	wire in_reset, in_precharge, in_transition, in_transition_ph0, in_transition_ph1, in_transition_ph2, in_measurement;
 	wire tempsens_measure;
 	wire [N_VDAC-1:0] tempsens_dat;
 	reg [1:0] ctrl_state;
@@ -61,28 +59,40 @@ module hpretl_tt03_temperature_sensor (
 	localparam TRANSITION = 2'd2;
 	localparam MEASURE = 2'd3;
 
-	// VDAC max value
+	// VDAC max and min value
 	localparam VMAX = {N_VDAC{1'b1}};
 	localparam VMIN = {N_VDAC{1'b0}};
 
-	// assign control signals based on state
-	assign tempsens_en = (ctrl_state == RESET) ? 1'b0 : 1'b1;
-	assign transition = (ctrl_state == TRANSITION);	
-	assign tempsens_dat =		(ctrl_state == PRECHARGE)							? VMAX : 
-								((ctrl_state == TRANSITION) && !transition_phase2)	? VMIN :
-								((ctrl_state == TRANSITION) && transition_phase2)	? tempsens_cfg :
-								(ctrl_state == MEASURE)								? tempsens_cfg :
+	// create state signals based on state of state machine
+	assign in_reset = (ctrl_state == RESET);
+	assign in_precharge = (ctrl_state == PRECHARGE);
+	assign in_transition = (ctrl_state == TRANSITION);
+	assign in_transition_ph0 = in_transition & ~transition_del1 & ~transition_del2;
+	assign in_transition_ph1 = in_transition &  transition_del1 & ~transition_del2;
+	assign in_transition_ph2 = in_transition &  transition_del1 &  transition_del2;
+	assign in_measurement = (ctrl_state == MEASURE);
+
+	// create temperature sensor input signal based on state signals, gate output to
+	assign tempsens_en = in_reset ? 1'b0 : 1'b1;
+	assign tempsens_dat =		in_precharge		? VMAX : 
+								in_transition_ph0	? VMIN :
+								in_transition_ph1	? VMIN :
+								in_transition_ph2	? tempsens_cfg :
+								in_measurement		? tempsens_cfg :
 								VMAX;
-	assign tempsens_measure = 	(ctrl_state == PRECHARGE) ?	1'b0 :			
-								((ctrl_state == TRANSITION) && !transition_phase1)	? 1'b0 :
-								((ctrl_state == TRANSITION) && transition_phase1)	? 1'b1 :
-								(ctrl_state == MEASURE) ? 1'b1 :
+	assign tempsens_measure = 	in_precharge		? 1'b0 :
+								in_transition_ph0	? 1'b0 :
+								in_transition_ph1	? 1'b1 :
+								in_transition_ph2	? 1'b1 :			
+								in_measurement 		? 1'b1 :
 								1'b0;
-	
+	// form a nice PWM signal (active high time is proportional the temperature)
+	assign temp_pwm_out = (in_transition_ph2 | in_measurement) & temp_delay;
+
 	// display state on number LED
 	assign digit = {2'b00,ctrl_state};
 
-	// state machine implementation
+	// state machine implementation for temperature sensor control
     always @(posedge clk) begin
         if (reset) begin
 			// if reset, set state to RESET
@@ -99,25 +109,25 @@ module hpretl_tt03_temperature_sensor (
 		end
 	end
 
-    // instantiate temperature-dependent delay
+    // instantiate temperature-dependent delay (this is the core circuit)
     tempsense #(.DAC_RESOLUTION(N_VDAC), .CAP_LOAD(10)) temp1 (
         .i_dac_data(tempsens_dat),
         .i_dac_en(tempsens_en),
         .i_precharge_n(tempsens_measure),
-        .o_tempdelay(temp_pwm_out)
+        .o_tempdelay(temp_delay)
     );
 
-	// instantiate delay cell to make a delayed transition when switching VDAC
+	// instantiate delay cells to make a delayed transition when switching VDAC
 	delay_cell #(.NDELAY(4)) del1 (
-		.i_in(transition),
-		.o_del(transition_phase1)
+		.i_in(in_transition),
+		.o_del(transition_del1)
 	);
 	delay_cell #(.NDELAY(4)) del2 (
-		.i_in(transition_phase1 & en_quick_transition),
-		.o_del(transition_phase2)
+		.i_in(transition_del1 & en_quick_transition),
+		.o_del(transition_del2)
 	);
 
-    // instantiate segment display
+    // instantiate segment display decoder
     seg7 disp1 (
         .i_disp(digit),
         .o_segments(led_out)
