@@ -124,6 +124,8 @@ value="
 * Misc
 ****************
 .param fclk=10k
+.options method=gear maxord=2
+.temp 30
 
 *.save all
 .save clk rst en_qutrans ts_cfg4 ts_cfg3 ts_cfg2 ts_cfg1 ts_cfg0 state0 state1 pwm_out i(VDD1)
@@ -131,7 +133,8 @@ value="
 set num_threads=6
 tran 1u 0.5m
 
-plot clk rst pwm_out state0 state1
+*plot clk rst pwm_out i(VDD1)
+plot pwm_out
 
 set wr_vecnames
 write tb_tempsens.raw clk rst en_qutrans ts_cfg4 ts_cfg3 ts_cfg2 ts_cfg1 ts_cfg0 state0 state1 pwm_out
@@ -148,7 +151,7 @@ C {devices/vsource.sym} 220 -260 0 0 {name=V19 value=1.8
 }
 C {devices/vsource.sym} 280 -260 0 0 {name=V20 value=0}
 C {devices/vsource.sym} 340 -260 0 0 {name=V21 value=1.8}
-C {devices/vsource.sym} 400 -260 0 0 {name=V22 value=0}
+C {devices/vsource.sym} 400 -260 0 0 {name=V22 value=1.8}
 C {devices/vsource.sym} 460 -260 0 0 {name=V23 value=0}
 C {devices/vsource.sym} 520 -260 0 0 {name=V24 value=0}
 C {devices/vsource.sym} 660 -250 0 0 {name=VCM value="0 pulse(0 1.8 1u 1n 1n \{0.5/fclk\} \{1/fclk\})"}
