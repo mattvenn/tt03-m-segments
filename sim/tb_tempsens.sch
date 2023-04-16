@@ -129,7 +129,7 @@ value="
 .save clk rst en_qutrans ts_cfg4 ts_cfg3 ts_cfg2 ts_cfg1 ts_cfg0 state0 state1 pwm_out i(VDD1)
 .control
 set num_threads=6
-tran 1n 0.5m
+tran 1u 0.5m
 
 plot clk rst pwm_out state0 state1
 
