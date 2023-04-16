@@ -40,15 +40,16 @@ module hpretl_tt03_temperature_sensor (
 
 	// definition of external outputs
 	wire [6:0] led_out;
-	wire dot_out;
+	wire temp_pwm_out;
 	assign io_out[6:0] = led_out;
-	assign io_out[7] = dot_out;
+	assign io_out[7] = temp_pwm_out;
 
 	// definition of internal wires and regs
     wire tempsens_en;
-    wire tempsens_precharge;
-	wire tempsens_precharge_del;
-	wire next_state;
+	wire measure_early;
+	wire transition;
+	wire transition_phase1;
+	wire transition_phase2;
 	wire tempsens_measure;
 	wire [N_VDAC-1:0] tempsens_dat;
 	reg [1:0] ctrl_state;
@@ -62,15 +63,24 @@ module hpretl_tt03_temperature_sensor (
 
 	// VDAC max value
 	localparam VMAX = {N_VDAC{1'b1}};
+	localparam VMIN = {N_VDAC{1'b0}};
 
 	// assign control signals based on state
 	assign tempsens_en = (ctrl_state == RESET) ? 1'b0 : 1'b1;
-	assign tempsens_precharge = (ctrl_state == PRECHARGE) ? 1'b1 : 1'b0;
-	assign tempsens_dat = (ctrl_state == PRECHARGE) ? VMAX : tempsens_cfg;
-	assign tempsens_measure = ((ctrl_state == MEASURE) || ((ctrl_state == TRANSITION) & next_state)) ? 1'b1 : 1'b0;
-	assign next_state = ~tempsens_precharge_del & en_quick_transition;
-	//assign digit = {2'b00,ctrl_state};
-	assign digit = 4'b0000;
+	assign transition = (ctrl_state == TRANSITION);	
+	assign tempsens_dat =		(ctrl_state == PRECHARGE)							? VMAX : 
+								((ctrl_state == TRANSITION) && !transition_phase2)	? VMIN :
+								((ctrl_state == TRANSITION) && transition_phase2)	? tempsens_cfg :
+								(ctrl_state == MEASURE)								? tempsens_cfg :
+								VMAX;
+	assign tempsens_measure = 	(ctrl_state == PRECHARGE) ?	1'b0 :			
+								((ctrl_state == TRANSITION) && !transition_phase1)	? 1'b0 :
+								((ctrl_state == TRANSITION) && transition_phase1)	? 1'b1 :
+								(ctrl_state == MEASURE) ? 1'b1 :
+								1'b0;
+	
+	// display state on number LED
+	assign digit = {2'b00,ctrl_state};
 
 	// state machine implementation
     always @(posedge clk) begin
@@ -90,17 +100,21 @@ module hpretl_tt03_temperature_sensor (
 	end
 
     // instantiate temperature-dependent delay
-    tempsense #(.DAC_RESOLUTION(N_VDAC)) temp1 (
+    tempsense #(.DAC_RESOLUTION(N_VDAC), .CAP_LOAD(10)) temp1 (
         .i_dac_data(tempsens_dat),
         .i_dac_en(tempsens_en),
         .i_precharge_n(tempsens_measure),
-        .o_tempdelay(dot_out)
+        .o_tempdelay(temp_pwm_out)
     );
 
 	// instantiate delay cell to make a delayed transition when switching VDAC
-	delay_cell del1 (
-		.i_in(tempsens_precharge),
-		.o_del(tempsens_precharge_del)
+	delay_cell #(.NDELAY(4)) del1 (
+		.i_in(transition),
+		.o_del(transition_phase1)
+	);
+	delay_cell #(.NDELAY(4)) del2 (
+		.i_in(transition_phase1 & en_quick_transition),
+		.o_del(transition_phase2)
 	);
 
     // instantiate segment display

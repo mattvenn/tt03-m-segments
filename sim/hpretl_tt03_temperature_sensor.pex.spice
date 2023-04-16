@@ -1,0 +1,1372 @@
+* PEX produced on Sun Apr 16 02:20:49 PM CEST 2023 using /foss/tools/iic-osic/iic-pex.sh with m=1 and s=1
+* NGSPICE file created from hpretl_tt03_temperature_sensor.ext - technology: sky130A
+
+.subckt hpretl_tt03_temperature_sensor io_in[1] io_in[2] io_in[3] io_in[4] io_in[5]
++ io_in[6] io_in[7] io_out[0] io_out[1] io_out[2] io_out[3] io_out[4] io_out[5] io_out[6]
++ io_out[7] io_in[0] vccd1 vssd1
+X7 vssd1 io_in[5] a_1591_12015# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0754 pd=0.81 as=0.1352 ps=1.56 w=0.52 l=0.15
+X13 vssd1 a_3971_17973# _43_.X vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X20 del1.delay_chain\[3\].inv2.A del1.delay_chain\[2\].inv2.Y vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X26 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_1840_6031# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X27 a_4051_2197# a_4219_2197# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.135 ps=1.27 w=1 l=0.15
+X35 vssd1 _63_.A1 a_6567_16143# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X38 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z _63_.A1 a_5540_10927# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+R0 temp1.capload\[3\].cap_11.LO vssd1 sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X49 a_7331_15823# _63_.A1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.16 ps=1.32 w=1 l=0.15
+X50 a_1827_4373# a_2118_4673# a_2069_4765# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0567 pd=0.69 as=0.0882 ps=0.84 w=0.42 l=0.15
+X52 a_2686_1679# clkbuf_0_io_in[0].X vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.1113 ps=1.37 w=0.42 l=0.15
+X53 a_6998_1501# a_6559_1135# a_6913_1135# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0621 pd=0.705 as=0.0813 ps=0.83 w=0.36 l=0.15
+X55 vccd1 temp1.inv2.A _91_.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+R1 vccd1 temp1.capload\[4\].cap_12.HI sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X61 _63_.A1 _43_.X a_9135_14191# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X66 vccd1 io_in[7] a_1591_15279# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.11455 pd=1.08 as=0.2054 ps=2.1 w=0.79 l=0.15
+X70 vccd1 _59_.A2 _59_.B1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X71 _62_.Y _59_.A2 a_7331_15823# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X76 a_1840_6031# a_1591_6031# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X78 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_1768_7663# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X84 a_4503_2197# _74_.CLK vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0567 ps=0.69 w=0.42 l=0.15
+X91 _59_.B1 _43_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X92 a_1827_2197# a_2111_2197# a_2046_2223# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0684 pd=0.74 as=0.066 ps=0.745 w=0.36 l=0.15
+X98 a_5520_21263# a_5271_21263# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X101 _35_.Y _69_.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X102 a_4337_1135# _41_.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.05775 pd=0.695 as=0.1092 ps=1.36 w=0.42 l=0.15
+X106 vccd1 _59_.A1 a_5459_12559# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.105 ps=1.21 w=1 l=0.15
+X109 vccd1 a_2686_1679# _76_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X113 a_5179_12879# _59_.A1 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X114 _38_.A1 a_1591_4943# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.1625 ps=1.325 w=1 l=0.15
+X122 _74_.CLK a_1753_1109# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X123 vssd1 a_2318_3285# a_2247_3311# vssd1 sky130_fd_pr__nfet_01v8 ad=0.12095 pd=1.085 as=0.0989 ps=0.995 w=0.64 l=0.15
+X129 temp1.capload\[4\].cap.Z temp1.capload\[0\].cap.A a_4160_20719# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X134 a_4841_16143# _58_.X a_4743_15823# vssd1 sky130_fd_pr__nfet_01v8 ad=0.099125 pd=0.955 as=0.2015 ps=1.92 w=0.65 l=0.15
+X136 vssd1 a_1753_1109# _74_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.05775 pd=0.695 as=0.0588 ps=0.7 w=0.42 l=0.15
+X138 vccd1 _59_.A2 _59_.B1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+R2 vssd1 temp1.capload\[7\].cap_15.LO sky130_fd_pr__res_generic_po w=0.48 l=0.045
+R3 vccd1 temp1.capload\[8\].cap_16.HI sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X144 vccd1 _69_.A _69_.Y vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X145 a_2557_8751# _59_.A2 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X149 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_5520_21263# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X153 a_2069_3677# a_1659_3285# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0882 pd=0.84 as=0.1113 ps=1.37 w=0.42 l=0.15
+X155 a_12253_17231# _43_.X _59_.A1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X160 io_out[3] a_1659_4087# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X164 _59_.B1 _59_.A2 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X165 a_3975_16143# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X166 _69_.A a_3995_18793# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.15575 ps=1.355 w=1 l=0.15
+X172 a_1591_17455# _43_.X _59_.B1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.247 pd=2.06 as=0.08775 ps=0.92 w=0.65 l=0.15
+X175 a_4713_16367# _44_.B_N a_4495_16341# vssd1 sky130_fd_pr__nfet_01v8 ad=0.10075 pd=0.96 as=0.169 ps=1.82 w=0.65 l=0.15
+X179 vccd1 a_2962_2767# clkbuf_0_io_in[0].X vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X180 _34_.B _44_.B_N vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X182 a_7423_1501# a_6725_1135# a_7166_1247# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0684 pd=0.74 as=0.0989 ps=0.995 w=0.36 l=0.15
+X186 a_4803_19631# temp1.capload\[0\].cap.A temp1.capload\[8\].cap.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X190 vccd1 _54_.X a_11201_16367# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X194 _76_.CLK a_2686_1679# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X195 a_1659_4373# a_1827_4373# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.135 ps=1.27 w=1 l=0.15
+X202 a_1827_4087# a_2118_3977# a_2069_3855# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0567 pd=0.69 as=0.0882 ps=0.84 w=0.42 l=0.15
+X206 vccd1 a_2191_8725# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X212 vssd1 _50_.X a_7847_7663# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X213 vccd1 _59_.B1 a_4477_10383# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X216 vccd1 a_1753_1109# _74_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X227 _74_.CLK a_1753_1109# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X231 a_4477_10383# _50_.X temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X233 vccd1 temp1.capload\[4\].cap_12.LO a_3983_20719# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+R4 vssd1 temp1.capload\[0\].cap.TE sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X249 _43_.X a_3971_17973# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X256 a_1659_3285# a_1827_3285# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.135 ps=1.27 w=1 l=0.15
+X261 vccd1 a_4961_17143# a_4774_16885# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14075 pd=1.325 as=0.26 ps=2.52 w=1 l=0.15
+X265 a_2247_3311# a_2111_3285# a_1827_3285# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1095 pd=1.075 as=0.0567 ps=0.69 w=0.42 l=0.15
+X269 a_4961_17143# _38_.B1 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X271 clkbuf_0_io_in[0].X a_2962_2767# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X272 vssd1 _63_.B2 a_9135_14191# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X277 a_6692_18231# temp1.capload\[6\].cap.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X279 del2.delay_chain\[3\].inv1.Y del2.delay_chain\[2\].inv2.Y vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X284 a_10280_14967# _63_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X295 del2.delay_chain\[0\].inv1.A a_4995_13647# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1352 pd=1.56 as=0.0754 ps=0.81 w=0.52 l=0.15
+X296 _76_.CLK a_2686_1679# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X297 a_6913_1135# _41_.Y vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0813 pd=0.83 as=0.1092 ps=1.36 w=0.42 l=0.15
+X307 _59_.B1 _59_.A2 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X310 a_7331_15823# _59_.A2 _62_.Y vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X311 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE a_4259_14735# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X325 _62_.Y _63_.B2 a_6649_15823# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X330 vssd1 _59_.X a_6835_14735# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X332 vccd1 _43_.X _59_.B1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X338 del2.delay_chain\[2\].inv1.Y del2.delay_chain\[2\].inv1.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X345 a_2111_3285# _76_.CLK vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1664 pd=1.8 as=0.0864 ps=0.91 w=0.64 l=0.15
+X347 a_6649_15823# _63_.B2 _62_.Y vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X349 _74_.CLK a_1753_1109# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.1375 ps=1.275 w=1 l=0.15
+X352 _38_.Y _38_.B1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.174 pd=1.39 as=0.182 ps=1.92 w=0.7 l=0.15
+X353 vssd1 _59_.A2 a_5179_12879# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.115375 ps=1.005 w=0.65 l=0.15
+X354 a_4219_2197# a_4510_2497# a_4461_2589# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0567 pd=0.69 as=0.0882 ps=0.84 w=0.42 l=0.15
+X358 vssd1 a_2743_14954# _68_.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.0754 pd=0.81 as=0.1352 ps=1.56 w=0.52 l=0.15
+X362 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z _63_.A1 a_4252_13103# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X364 a_7423_1501# a_6559_1135# a_7166_1247# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0567 pd=0.69 as=0.1095 ps=1.075 w=0.42 l=0.15
+X373 clkbuf_0_io_in[0].X a_2962_2767# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X376 io_out[2] a_4051_2197# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X378 del2.delay_chain\[2\].inv2.Y del2.delay_chain\[2\].inv1.Y vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X381 _41_.A _38_.A1 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.26 ps=2.1 w=0.65 l=0.15
+X382 vccd1 _62_.Y a_2143_11471# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X383 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE a_5271_21263# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X384 _69_.Y _41_.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X386 a_1659_4373# a_1827_4373# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X398 a_12071_13353# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X399 a_2320_11791# _62_.Y vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X401 a_4251_5487# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X411 vccd1 a_2962_2767# clkbuf_0_io_in[0].X vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1375 pd=1.275 as=0.14 ps=1.28 w=1 l=0.15
+X412 vssd1 clkbuf_0_io_in[0].X a_2686_1679# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X414 _59_.B1 _43_.X a_1591_17455# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X419 vssd1 temp1.capload\[8\].cap_16.LO a_4803_19631# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X420 vccd1 a_4503_2197# a_4510_2497# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0864 pd=0.91 as=0.1664 ps=1.8 w=0.64 l=0.15
+X427 vccd1 _63_.X a_4075_13103# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X441 a_3704_12675# a_3431_12919# a_3622_12675# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0441 pd=0.63 as=0.1092 ps=1.36 w=0.42 l=0.15
+X444 a_3983_14191# temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X445 temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A _46_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X450 a_4931_1501# a_4149_1135# a_4847_1501# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0882 pd=0.84 as=0.0567 ps=0.69 w=0.42 l=0.15
+X451 a_4477_10383# _59_.B1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.16 ps=1.32 w=1 l=0.15
+X454 vccd1 a_12120_13255# a_12071_13353# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X458 vssd1 _38_.B1 a_5057_2223# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0813 ps=0.83 w=0.42 l=0.15
+X461 vssd1 a_2962_2767# clkbuf_0_io_in[0].X vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X462 vccd1 _43_.X temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X465 vccd1 a_4208_15431# a_4159_15529# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X469 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE _50_.X a_4477_10383# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X478 a_4181_17455# _59_.B1 a_4097_17455# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X479 vccd1 a_7591_1403# a_7507_1501# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1113 pd=1.37 as=0.0882 ps=0.84 w=0.42 l=0.15
+X487 a_3795_10383# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X491 vccd1 _50_.X temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X492 a_6649_15823# _59_.B1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X493 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_9135_12015# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X504 _44_.B_N a_1659_2197# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X507 vccd1 _54_.A a_5453_17705# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14825 pd=1.34 as=0.0441 ps=0.63 w=0.42 l=0.15
+X518 a_5172_20719# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X524 vccd1 a_5462_14441# _63_.B2 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.31 pd=2.62 as=0.135 ps=1.27 w=1 l=0.15
+X525 a_5371_17705# a_5179_17461# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.1575 ps=1.17 w=0.42 l=0.15
+X533 vssd1 del1.delay_chain\[2\].inv2.A del1.delay_chain\[2\].inv2.Y vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X534 a_5462_14441# a_5271_14197# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.15645 ps=1.165 w=0.42 l=0.15
+X539 clkbuf_0_io_in[0].X a_2962_2767# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X542 vccd1 a_2111_2197# a_2118_2497# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0864 pd=0.91 as=0.1664 ps=1.8 w=0.64 l=0.15
+X545 vccd1 _74_.CLK a_6559_1135# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0864 pd=0.91 as=0.1664 ps=1.8 w=0.64 l=0.15
+X548 a_3055_21807# temp1.capload\[0\].cap.A temp1.capload\[3\].cap.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X553 vccd1 a_2191_8725# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X555 vccd1 a_6515_3463# _37_.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14825 pd=1.34 as=0.275 ps=2.55 w=1 l=0.15
+X557 vccd1 a_3622_12675# _50_.X vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.31 pd=2.62 as=0.135 ps=1.27 w=1 l=0.15
+X559 a_6649_15823# _59_.B1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X566 a_2111_2197# _76_.CLK vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0567 ps=0.69 w=0.42 l=0.15
+X567 vccd1 a_2318_4373# a_2247_4399# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.178875 pd=1.26 as=0.1095 ps=1.075 w=0.75 l=0.15
+X575 _74_.CLK a_1753_1109# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X578 a_6239_19783# _58_.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.10025 ps=0.985 w=0.42 l=0.15
+X585 vssd1 _66_.Y a_2665_2223# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0813 ps=0.83 w=0.42 l=0.15
+X591 a_11795_13967# temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X593 vssd1 a_1753_1109# _74_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X602 io_out[3] a_1659_4087# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X603 vccd1 _63_.A1 a_4453_17705# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.165 pd=1.33 as=0.105 ps=1.21 w=1 l=0.15
+X604 vccd1 _58_.A a_2611_16617# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X612 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE a_2235_20175# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X613 vssd1 a_5280_17143# _38_.B1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.169 ps=1.82 w=0.65 l=0.15
+X615 a_5772_15431# temp1.capload\[7\].cap_15.LO vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X618 vssd1 a_2686_1679# _76_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.1113 pd=1.37 as=0.0588 ps=0.7 w=0.42 l=0.15
+X621 a_10968_10927# _60_.Y vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X627 vccd1 input6.X a_3704_12675# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14825 pd=1.34 as=0.0441 ps=0.63 w=0.42 l=0.15
+X629 del1.delay_chain\[2\].inv2.A del1.delay_chain\[2\].inv1.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X631 a_2191_8725# _50_.X a_2997_9001# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X632 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_2320_11791# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X633 vccd1 _74_.CLK a_3983_1135# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0864 pd=0.91 as=0.1664 ps=1.8 w=0.64 l=0.15
+X634 a_3795_10383# _59_.A2 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X636 a_2412_20495# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X641 vccd1 a_2962_2767# clkbuf_0_io_in[0].X vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X645 a_5280_17143# _37_.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.14075 ps=1.325 w=0.42 l=0.15
+X648 vssd1 io_in[3] a_1591_7119# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0754 pd=0.81 as=0.1352 ps=1.56 w=0.52 l=0.15
+X651 a_3737_19407# _58_.X a_3639_19087# vssd1 sky130_fd_pr__nfet_01v8 ad=0.099125 pd=0.955 as=0.2015 ps=1.92 w=0.65 l=0.15
+X653 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_3795_10383# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.16 pd=1.32 as=0.135 ps=1.27 w=1 l=0.15
+X660 temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A _43_.X a_9963_10927# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X664 vssd1 del2.delay_chain\[0\].inv2.A del2.delay_chain\[1\].inv1.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X670 a_6643_8527# _63_.A1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X671 _54_.X a_5371_17705# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.101875 ps=0.99 w=0.65 l=0.15
+X672 a_2318_2197# a_2111_2197# a_2494_2589# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.06825 pd=0.745 as=0.07665 ps=0.785 w=0.42 l=0.15
+X675 a_7932_13103# _59_.B1 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X679 _76_.CLK a_2686_1679# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X686 a_3828_19407# _59_.A2 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X689 a_3983_14441# _59_.B1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X698 a_4944_19319# temp1.capload\[2\].cap_10.LO vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X699 a_5057_2223# a_4503_2197# a_4710_2197# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0813 pd=0.83 as=0.0621 ps=0.705 w=0.36 l=0.15
+X703 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_2143_18543# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X705 a_6469_19881# _42_.B a_6374_19881# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0441 pd=0.63 as=0.06825 ps=0.745 w=0.42 l=0.15
+X708 a_2467_2223# a_2247_2223# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0696 pd=0.765 as=0.12095 ps=1.085 w=0.42 l=0.15
+X709 a_5057_2223# a_4510_2497# a_4710_2197# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.05775 pd=0.695 as=0.06825 ps=0.745 w=0.42 l=0.15
+X710 vssd1 _74_.CLK a_6559_1135# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.1092 ps=1.36 w=0.42 l=0.15
+X712 a_4097_17455# _58_.X a_3994_17455# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.23725 ps=2.03 w=0.65 l=0.15
+R5 temp1.capload\[2\].cap_10.LO vssd1 sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X721 a_2494_2589# a_2247_2223# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.07665 pd=0.785 as=0.178875 ps=1.26 w=0.42 l=0.15
+X725 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_3795_10383# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X729 vssd1 _63_.A1 a_4181_17455# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X730 vccd1 _59_.B1 a_6649_15823# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X731 vccd1 _63_.A1 a_7331_15823# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X738 io_out[5] a_1659_4373# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X739 vssd1 _41_.A _41_.Y vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X751 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_5172_20719# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X752 a_10875_16143# temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X753 _59_.B1 _43_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X756 _76_.CLK a_2686_1679# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X758 temp1.dac.parallel_cells\[0\].vdac_batch.einvp_batch\[0\].vref.TE _59_.B1 a_5179_12879# vssd1 sky130_fd_pr__nfet_01v8 ad=0.092625 pd=0.935 as=0.169 ps=1.82 w=0.65 l=0.15
+X763 a_6745_3561# _38_.A1 a_6650_3561# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0441 pd=0.63 as=0.06825 ps=0.745 w=0.42 l=0.15
+X773 a_2318_2197# a_2118_2497# a_2467_2223# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0621 pd=0.705 as=0.0696 ps=0.765 w=0.36 l=0.15
+X775 a_4895_19407# temp1.capload\[0\].cap.A temp1.capload\[2\].cap.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X776 a_5448_21583# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X781 a_4431_14441# _59_.A2 _60_.Y vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X782 io_out[4] a_7591_1403# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+R6 temp1.capload\[5\].cap_13.LO vssd1 sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X791 vccd1 _46_.A a_1956_20969# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14825 pd=1.34 as=0.0441 ps=0.63 w=0.42 l=0.15
+X793 vssd1 _74_.CLK a_3983_1135# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.1092 ps=1.36 w=0.42 l=0.15
+X802 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_4167_9839# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X805 a_4208_15431# temp1.capload\[9\].cap.TE vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X814 clkbuf_0_io_in[0].X a_2962_2767# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X821 a_2665_2223# a_2111_2197# a_2318_2197# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0813 pd=0.83 as=0.0621 ps=0.705 w=0.36 l=0.15
+X825 a_2665_2223# a_2118_2497# a_2318_2197# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.05775 pd=0.695 as=0.06825 ps=0.745 w=0.42 l=0.15
+X829 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE a_1775_16367# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X830 vssd1 a_1753_1109# _74_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X842 a_2962_2767# io_in[0] vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.1113 ps=1.37 w=0.42 l=0.15
+X844 vccd1 a_11201_16367# _59_.A2 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X845 a_4024_16055# _62_.Y vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X848 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE a_4995_20719# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X849 _59_.X a_3639_19087# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.28 pd=2.56 as=0.165 ps=1.33 w=1 l=0.15
+X851 vssd1 a_2750_20693# _58_.X vssd1 sky130_fd_pr__nfet_01v8 ad=0.10675 pd=1.005 as=0.08775 ps=0.92 w=0.65 l=0.15
+X854 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_1952_16367# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X862 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_2412_20495# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X863 vccd1 a_1753_1109# _74_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X870 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE _59_.A2 a_3795_10383# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X871 _59_.A2 a_11201_16367# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X873 a_2111_4073# _76_.CLK vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1664 pd=1.8 as=0.0864 ps=0.91 w=0.64 l=0.15
+X890 a_2012_26677# _91_.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1664 pd=1.8 as=0.149 ps=1.325 w=0.64 l=0.15
+X891 a_4477_10383# _50_.X temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X892 a_3795_10383# _59_.A2 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X898 _46_.A a_1591_9295# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.2054 pd=2.1 as=0.11455 ps=1.08 w=0.79 l=0.15
+X899 a_9963_10927# _46_.X vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X909 a_4973_1135# a_3983_1135# a_4847_1501# vssd1 sky130_fd_pr__nfet_01v8 ad=0.066 pd=0.745 as=0.0684 ps=0.74 w=0.36 l=0.15
+X911 a_3971_17973# _42_.X vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X912 vccd1 io_in[2] a_1591_5487# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.11455 pd=1.08 as=0.2054 ps=2.1 w=0.79 l=0.15
+X922 a_3472_13879# temp1.dac.parallel_cells\[0\].vdac_batch.einvp_batch\[0\].vref.TE vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X925 vccd1 _59_.B1 a_3983_14441# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.28 ps=2.56 w=1 l=0.15
+X930 vccd1 a_1753_1109# _74_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X931 _63_.A1 _43_.X a_9135_14191# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X936 a_2392_10089# a_2143_9839# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X938 a_2997_9001# _59_.B1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.395 ps=1.79 w=1 l=0.15
+X948 a_9135_14191# _43_.X _63_.A1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X954 temp1.capload\[1\].cap.Z temp1.capload\[0\].cap.A a_4436_20495# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X956 _59_.B1 _43_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X957 a_1768_6351# _62_.Y vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X958 a_7331_15823# _59_.A2 _62_.Y vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X961 a_4344_9839# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X967 vssd1 a_4051_2197# io_out[2] vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X977 vccd1 _43_.X _59_.B1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X979 vccd1 _63_.A1 a_7331_15823# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.29 pd=2.58 as=0.135 ps=1.27 w=1 l=0.15
+X982 a_4590_1247# a_4422_1501# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0989 pd=0.995 as=0.12095 ps=1.085 w=0.64 l=0.15
+X986 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_2392_10089# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X988 vccd1 _69_.A _35_.Y vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X1002 _60_.Y _59_.A2 a_4431_14441# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.28 ps=2.56 w=1 l=0.15
+R7 vssd1 temp1.capload\[6\].cap.TE sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X1019 vccd1 a_2686_1679# _76_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X1021 a_5772_16519# temp1.capload\[5\].cap_13.LO vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X1025 vssd1 _44_.X a_12253_17231# vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1029 vssd1 _62_.Y a_2143_9839# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1033 clkbuf_0_io_in[0].X a_2962_2767# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X1034 a_2046_4221# a_1659_4087# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.066 pd=0.745 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1037 vccd1 _38_.B1 a_5057_2223# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.05775 ps=0.695 w=0.42 l=0.15
+X1039 vccd1 a_3995_18793# _69_.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X1040 a_5459_12559# _59_.A2 temp1.dac.parallel_cells\[0\].vdac_batch.einvp_batch\[0\].vref.TE vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.105 pd=1.21 as=0.2325 ps=1.465 w=1 l=0.15
+X1060 a_3104_21959# temp1.capload\[3\].cap_11.LO vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X1061 _63_.X a_3994_17455# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.165 ps=1.33 w=1 l=0.15
+X1066 vccd1 io_in[0] a_2962_2767# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X1068 _59_.A2 a_11201_16367# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1070 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE a_3063_14191# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1072 a_2247_2223# a_2118_2497# a_1827_2197# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0989 pd=0.995 as=0.0684 ps=0.74 w=0.36 l=0.15
+X1077 vccd1 _62_.Y a_2143_9839# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1078 vssd1 a_1659_2197# _44_.B_N vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1079 _38_.A1 a_1591_4943# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.06825 ps=0.745 w=0.42 l=0.15
+X1081 a_5723_16617# temp1.capload\[0\].cap.A temp1.capload\[5\].cap.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X1088 a_4477_10383# _59_.B1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1092 vssd1 _62_.Y a_1591_6031# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1100 vccd1 io_in[1] a_1591_4943# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1625 pd=1.325 as=0.265 ps=2.53 w=1 l=0.15
+X1107 vccd1 a_4710_2197# a_4639_2223# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.178875 pd=1.26 as=0.1095 ps=1.075 w=0.75 l=0.15
+X1112 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE _50_.X a_4477_10383# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1114 _76_.CLK a_2686_1679# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.1375 ps=1.275 w=1 l=0.15
+X1119 vccd1 _44_.B_N _34_.B vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X1124 _53_.A a_4199_13985# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.182 pd=1.86 as=0.1118 ps=1.04 w=0.65 l=0.15
+X1128 vssd1 a_2318_4373# a_2247_4399# vssd1 sky130_fd_pr__nfet_01v8 ad=0.12095 pd=1.085 as=0.0989 ps=0.995 w=0.64 l=0.15
+X1131 vssd1 _62_.Y a_2143_11471# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1135 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A _50_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X1138 vccd1 a_5772_16519# a_5723_16617# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X1139 a_6913_1135# _41_.Y vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.05775 pd=0.695 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1145 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_7840_17231# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X1148 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_2964_6575# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X1157 a_9135_14191# _63_.B2 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1163 vccd1 io_out[3] a_1591_21271# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.149 pd=1.325 as=0.1664 ps=1.8 w=0.64 l=0.15
+X1165 vccd1 _58_.A a_4798_16617# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.1525 ps=1.305 w=1 l=0.15
+X1167 vccd1 _66_.Y a_2665_2223# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.05775 ps=0.695 w=0.42 l=0.15
+X1172 vssd1 a_2962_2767# clkbuf_0_io_in[0].X vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X1175 a_9384_12265# a_9135_12015# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X1177 a_7549_1135# a_6559_1135# a_7423_1501# vssd1 sky130_fd_pr__nfet_01v8 ad=0.066 pd=0.745 as=0.0684 ps=0.74 w=0.36 l=0.15
+X1183 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_2143_18543# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1185 a_1753_1109# clkbuf_0_io_in[0].X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X1186 _74_.CLK a_1753_1109# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X1194 a_2046_3311# a_1659_3285# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.066 pd=0.745 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1197 vccd1 _38_.A1 a_5001_17999# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.105 ps=1.21 w=1 l=0.15
+X1203 a_2320_9839# _62_.Y vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X1206 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_2191_8725# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X1208 clkbuf_0_io_in[0].X a_2962_2767# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X1209 _74_.CLK a_1753_1109# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X1213 a_6239_19783# a_6511_19611# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0567 ps=0.69 w=0.42 l=0.15
+X1223 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_9384_12265# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X1235 _46_.A a_1591_9295# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1352 pd=1.56 as=0.0754 ps=0.81 w=0.52 l=0.15
+X1241 vssd1 io_in[2] a_1591_5487# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0754 pd=0.81 as=0.1352 ps=1.56 w=0.52 l=0.15
+X1253 vssd1 _38_.A1 _41_.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.10725 pd=0.98 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1254 vccd1 _59_.B1 a_4477_10383# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X1256 vssd1 a_6239_19783# _42_.X vssd1 sky130_fd_pr__nfet_01v8 ad=0.10025 pd=0.985 as=0.17875 ps=1.85 w=0.65 l=0.15
+X1257 a_2915_8751# _59_.B1 a_2557_8751# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1259 _66_.Y _38_.B1 a_2419_16143# vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1261 vccd1 a_4024_16055# a_3975_15823# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X1272 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE a_1683_21807# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1282 a_4932_16143# _59_.A2 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X1310 a_5540_10927# _63_.X vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X1318 vssd1 a_7591_1403# a_7549_1135# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.066 ps=0.745 w=0.42 l=0.15
+X1329 vssd1 temp1.inv2.A _91_.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X1331 a_7847_7663# _43_.X temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1339 a_4097_17455# _63_.B2 a_4181_17455# vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1340 a_1827_3285# a_2111_3285# a_2046_3311# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0684 pd=0.74 as=0.066 ps=0.745 w=0.36 l=0.15
+X1347 vccd1 _59_.B1 a_6649_15823# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.16 pd=1.32 as=0.135 ps=1.27 w=1 l=0.15
+X1348 vssd1 _38_.A1 a_6515_3463# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.0567 ps=0.69 w=0.42 l=0.15
+X1351 vssd1 _63_.X a_10231_15055# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X1368 _35_.Y _69_.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X1372 vssd1 a_2962_2767# clkbuf_0_io_in[0].X vssd1 sky130_fd_pr__nfet_01v8 ad=0.1113 pd=1.37 as=0.0588 ps=0.7 w=0.42 l=0.15
+X1381 vssd1 _53_.A a_4995_13647# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0754 pd=0.81 as=0.1352 ps=1.56 w=0.52 l=0.15
+X1387 _74_.CLK a_1753_1109# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X1392 a_2069_4765# a_1659_4373# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0882 pd=0.84 as=0.1113 ps=1.37 w=0.42 l=0.15
+X1395 vssd1 a_5015_1403# a_4973_1135# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.066 ps=0.745 w=0.42 l=0.15
+X1397 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_4436_15055# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X1402 a_10924_16055# temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X1407 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_3713_10703# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X1424 vssd1 _42_.B a_6239_19783# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.0567 ps=0.69 w=0.42 l=0.15
+X1429 _69_.A a_3995_18793# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.10675 ps=1.005 w=0.65 l=0.15
+X1447 vccd1 a_2686_1679# _76_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X1453 a_2501_15823# _38_.A1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.105 pd=1.21 as=0.26 ps=2.52 w=1 l=0.15
+X1455 a_6998_1501# a_6725_1135# a_6913_1135# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.06825 pd=0.745 as=0.05775 ps=0.695 w=0.42 l=0.15
+X1465 vccd1 _63_.B2 _63_.A1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1466 del1.delay_chain\[2\].inv1.A del1.delay_chain\[1\].inv1.Y vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X1473 a_3431_12919# _44_.B_N vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1477 vssd1 a_1753_1109# _74_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X1480 a_2419_16143# _69_.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.10725 ps=0.98 w=0.65 l=0.15
+X1486 vssd1 _44_.B_N a_1683_20725# vssd1 sky130_fd_pr__nfet_01v8 ad=0.15645 pd=1.165 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1491 vssd1 _46_.X a_9963_10927# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X1498 a_5001_17999# _69_.A _38_.Y vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.105 pd=1.21 as=0.174 ps=1.39 w=1 l=0.15
+X1505 a_2247_4399# a_2111_4373# a_1827_4373# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1095 pd=1.075 as=0.0567 ps=0.69 w=0.42 l=0.15
+X1508 a_4159_15529# temp1.capload\[0\].cap.A temp1.capload\[9\].cap.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X1511 a_9963_10927# _43_.X temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1515 vccd1 clkbuf_0_io_in[0].X a_1753_1109# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X1520 a_3423_13967# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X1522 vssd1 io_in[0] a_2962_2767# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X1535 vssd1 _59_.A1 a_3828_19407# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1537 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE a_3063_14191# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1541 _60_.Y _46_.X a_3983_14441# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1542 a_2069_3855# a_1659_4087# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0882 pd=0.84 as=0.1113 ps=1.37 w=0.42 l=0.15
+R8 temp1.capload\[6\].cap_14.HI vccd1 sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X1545 a_3622_12675# a_3431_12919# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.15645 ps=1.165 w=0.42 l=0.15
+X1547 a_3055_9615# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X1571 a_3713_10703# _59_.A2 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1575 a_2111_4373# _74_.CLK vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1664 pd=1.8 as=0.0864 ps=0.91 w=0.64 l=0.15
+X1578 a_7331_15823# _63_.A1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1583 _76_.CLK a_2686_1679# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X1586 vssd1 _59_.A2 a_1591_17455# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X1591 _43_.X a_3971_17973# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X1592 vccd1 _43_.X _59_.B1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1593 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A _43_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1596 a_7124_1135# a_6725_1135# a_6998_1501# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0696 pd=0.765 as=0.0621 ps=0.705 w=0.36 l=0.15
+X1602 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_2557_8751# vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1603 _41_.Y _41_.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X1606 _74_.CLK a_1753_1109# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.05775 ps=0.695 w=0.42 l=0.15
+X1609 a_1591_17455# _59_.A2 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1610 a_4252_13103# _63_.X vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X1612 vssd1 del1.delay_chain\[3\].inv2.A del1.delay_chain\[3\].inv2.Y vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X1613 vssd1 del2.delay_chain\[3\].inv1.Y _42_.B vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X1615 vssd1 a_7423_1501# a_7591_1403# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X1622 _66_.Y _69_.A a_2501_15823# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.174 pd=1.39 as=0.105 ps=1.21 w=1 l=0.15
+X1623 vccd1 temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A a_4431_14441# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1625 vccd1 _63_.X a_5363_10927# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1626 _74_.CLK a_1753_1109# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.265 ps=2.53 w=1 l=0.15
+X1637 a_11201_16367# _54_.X vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X1644 a_2111_4073# _76_.CLK vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0567 ps=0.69 w=0.42 l=0.15
+X1646 vssd1 del1.delay_chain\[0\].inv2.A del1.delay_chain\[1\].inv1.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X1647 a_4349_23555# a_4075_23799# a_4267_23555# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0441 pd=0.63 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1648 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE a_1775_16367# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1651 a_7847_7663# _50_.X vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1653 vssd1 a_7166_1247# a_7124_1135# vssd1 sky130_fd_pr__nfet_01v8 ad=0.12095 pd=1.085 as=0.0696 ps=0.765 w=0.42 l=0.15
+X1654 a_2247_4233# a_2111_4073# a_1827_4087# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1095 pd=1.075 as=0.0567 ps=0.69 w=0.42 l=0.15
+X1663 a_2557_9001# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1666 a_12071_13103# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X1667 vssd1 _69_.Y a_2665_4233# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0813 ps=0.83 w=0.42 l=0.15
+X1673 vssd1 a_4495_16341# temp1.dcdc.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X1674 io_out[5] a_1659_4373# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X1675 vccd1 _58_.X a_4743_15823# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.165 pd=1.33 as=0.34 ps=2.68 w=1 l=0.15
+X1677 vssd1 a_2686_1679# _76_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X1688 _59_.A1 _43_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X1691 a_4852_19783# temp1.capload\[8\].cap_16.LO vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X1692 _63_.A1 _63_.B2 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X1693 a_4517_1501# a_3983_1135# a_4422_1501# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.07665 pd=0.785 as=0.06825 ps=0.745 w=0.42 l=0.15
+X1694 a_3975_15823# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X1695 vssd1 a_4847_1501# a_5015_1403# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X1697 _59_.A2 a_11201_16367# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1705 a_2893_16367# _34_.B vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.06825 pd=0.86 as=0.10725 ps=0.98 w=0.65 l=0.15
+X1707 vssd1 temp1.dac.vdac_single.einvp_batch\[0\].vref_18.LO a_2687_12879# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X1713 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_1932_22057# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X1715 _44_.A a_1591_7119# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.2054 pd=2.1 as=0.11455 ps=1.08 w=0.79 l=0.15
+X1717 _69_.Y _69_.A a_2689_19407# vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1718 vccd1 a_11201_16367# _59_.A2 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X1719 a_11844_13879# temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X1721 _34_.B _44_.B_N vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X1722 a_6650_3561# _44_.B_N vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.06825 pd=0.745 as=0.14825 ps=1.34 w=0.42 l=0.15
+X1732 io_out[6] a_1659_3285# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X1734 a_2191_8725# _58_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1735 a_2686_1679# clkbuf_0_io_in[0].X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X1747 vssd1 temp1.dac.parallel_cells\[0\].vdac_batch.einvp_batch\[0\].vref.TE a_3423_13967# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X1753 a_4678_17143# a_4774_16885# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.14075 ps=1.325 w=0.42 l=0.15
+X1756 a_1591_17455# _59_.A2 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1765 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_2320_9839# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X1772 vccd1 a_2111_3285# a_2118_3585# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0864 pd=0.91 as=0.1664 ps=1.8 w=0.64 l=0.15
+X1774 a_9135_14191# _43_.X _63_.A1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1777 a_3713_10703# _59_.B1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1781 a_2467_4221# a_2247_4233# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0696 pd=0.765 as=0.12095 ps=1.085 w=0.42 l=0.15
+X1783 a_4798_16617# del1.delay_chain\[3\].inv2.Y a_4495_16341# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1525 pd=1.305 as=0.195 ps=1.39 w=1 l=0.15
+X1787 a_4639_2223# a_4503_2197# a_4219_2197# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1095 pd=1.075 as=0.0567 ps=0.69 w=0.42 l=0.15
+X1789 a_2111_3285# _76_.CLK vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0567 ps=0.69 w=0.42 l=0.15
+X1791 _76_.CLK a_2686_1679# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X1794 a_5453_17705# a_5179_17461# a_5371_17705# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0441 pd=0.63 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1795 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE _50_.X a_3713_10703# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1797 vccd1 _48_.A a_5544_14441# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14825 pd=1.34 as=0.0441 ps=0.63 w=0.42 l=0.15
+X1800 a_7507_1501# a_6725_1135# a_7423_1501# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0882 pd=0.84 as=0.0567 ps=0.69 w=0.42 l=0.15
+X1804 a_3104_9527# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X1807 vssd1 a_2962_2767# clkbuf_0_io_in[0].X vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X1808 vssd1 a_6515_3463# _37_.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.10025 pd=0.985 as=0.17875 ps=1.85 w=0.65 l=0.15
+X1809 vssd1 _38_.Y a_2665_3311# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0813 ps=0.83 w=0.42 l=0.15
+X1810 vccd1 a_2318_4132# a_2247_4233# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.178875 pd=1.26 as=0.1095 ps=1.075 w=0.75 l=0.15
+X1822 vccd1 a_4051_2197# io_out[2] vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1829 vssd1 io_out[3] a_1591_21271# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1833 _74_.CLK a_1753_1109# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X1834 a_2552_22583# temp1.capload\[0\].cap.TE vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X1838 vccd1 del2.delay_chain\[0\].inv1.A del2.delay_chain\[0\].inv2.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X1842 a_2392_18793# a_2143_18543# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X1843 a_5772_16519# temp1.capload\[5\].cap_13.LO vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X1861 a_1753_1109# clkbuf_0_io_in[0].X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+R9 vccd1 temp1.dac.vdac_single.einvp_batch\[0\].pupd_19.HI sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X1865 clkbuf_0_io_in[0].X a_2962_2767# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.1375 ps=1.275 w=1 l=0.15
+X1866 vssd1 a_4503_2197# a_4510_2497# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1867 a_2962_2767# io_in[0] vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X1869 vssd1 a_2012_26677# io_out[7] vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1873 _41_.A _58_.A a_2893_16367# vssd1 sky130_fd_pr__nfet_01v8 ad=0.091 pd=0.93 as=0.06825 ps=0.86 w=0.65 l=0.15
+X1875 a_6643_17999# temp1.capload\[0\].cap.A temp1.capload\[6\].cap.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X1887 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_12071_13103# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X1892 temp1.capload\[0\].cap.A temp1.dcdc.A a_2392_18793# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X1897 a_2318_3285# a_2111_3285# a_2494_3677# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.06825 pd=0.745 as=0.07665 ps=0.785 w=0.42 l=0.15
+X1898 a_4453_17705# _59_.A2 a_3994_17455# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.105 pd=1.21 as=0.3875 ps=1.775 w=1 l=0.15
+X1899 temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.TE a_4743_15823# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.182 pd=1.86 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1904 a_2750_20693# _44_.B_N a_2965_20969# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.0441 ps=0.63 w=0.42 l=0.15
+X1912 vccd1 a_3994_17455# _63_.X vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X1914 a_4743_15823# _46_.X a_4937_15823# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.4125 pd=1.825 as=0.105 ps=1.21 w=1 l=0.15
+X1917 vccd1 a_6692_18231# a_6643_17999# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X1918 vssd1 a_2686_1679# _76_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.05775 pd=0.695 as=0.0588 ps=0.7 w=0.42 l=0.15
+X1920 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A _43_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1925 a_2467_3311# a_2247_3311# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0696 pd=0.765 as=0.12095 ps=1.085 w=0.42 l=0.15
+X1931 vccd1 a_1659_2197# _44_.B_N vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1937 a_2494_3677# a_2247_3311# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.07665 pd=0.785 as=0.178875 ps=1.26 w=0.42 l=0.15
+X1940 a_2689_19407# _41_.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X1941 a_1827_2197# a_2118_2497# a_2069_2589# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0567 pd=0.69 as=0.0882 ps=0.84 w=0.42 l=0.15
+X1947 vccd1 del2.delay_chain\[1\].inv2.A del2.delay_chain\[2\].inv1.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X1949 a_2736_12791# temp1.dac.vdac_single.einvp_batch\[0\].vref_18.LO vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X1950 vccd1 a_1753_1109# _74_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X1966 _63_.B2 a_5462_14441# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.101875 ps=0.99 w=0.65 l=0.15
+X1967 vccd1 a_3971_17973# _43_.X vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1970 vssd1 a_1591_21271# io_out[0] vssd1 sky130_fd_pr__nfet_01v8 ad=0.17225 pd=1.83 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1971 vssd1 _59_.A2 a_2557_8751# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1985 a_2318_3285# a_2118_3585# a_2467_3311# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0621 pd=0.705 as=0.0696 ps=0.765 w=0.36 l=0.15
+X1986 vssd1 a_2111_2197# a_2118_2497# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.1092 ps=1.36 w=0.42 l=0.15
+X1987 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_2191_8725# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X1999 vssd1 a_2962_2767# clkbuf_0_io_in[0].X vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2002 a_2915_8751# _58_.X a_2191_8725# vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2004 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.vdac_single.einvp_batch\[0\].pupd_19.HI a_8004_13353# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X2008 a_2743_14954# _38_.A1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.2054 pd=2.1 as=0.11455 ps=1.08 w=0.79 l=0.15
+X2010 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE _59_.B1 a_3713_10703# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.104 ps=0.97 w=0.65 l=0.15
+X2012 vccd1 del1.delay_chain\[1\].inv1.A del1.delay_chain\[1\].inv1.Y vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X2015 _76_.CLK a_2686_1679# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2023 _44_.X a_4267_23555# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.101875 ps=0.99 w=0.65 l=0.15
+X2024 a_3713_10703# _50_.X temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2030 vccd1 a_1659_4087# io_out[3] vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X2036 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_3713_10703# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2038 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_3240_14191# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X2039 a_5179_12879# _44_.X temp1.dac.parallel_cells\[0\].vdac_batch.einvp_batch\[0\].vref.TE vssd1 sky130_fd_pr__nfet_01v8 ad=0.115375 pd=1.005 as=0.092625 ps=0.935 w=0.65 l=0.15
+X2040 a_2665_3311# a_2111_3285# a_2318_3285# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0813 pd=0.83 as=0.0621 ps=0.705 w=0.36 l=0.15
+X2042 vssd1 io_in[1] a_1591_4943# vssd1 sky130_fd_pr__nfet_01v8 ad=0.06825 pd=0.745 as=0.1113 ps=1.37 w=0.42 l=0.15
+X2048 vccd1 a_2686_1679# _76_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X2049 a_2665_3311# a_2118_3585# a_2318_3285# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.05775 pd=0.695 as=0.06825 ps=0.745 w=0.42 l=0.15
+X2053 _68_.X a_2695_21263# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1352 pd=1.56 as=0.0754 ps=0.81 w=0.52 l=0.15
+X2055 vccd1 del1.delay_chain\[2\].inv2.A del1.delay_chain\[2\].inv2.Y vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X2064 a_2997_9001# _50_.X a_2191_8725# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X2066 a_4149_1135# a_3983_1135# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1664 pd=1.8 as=0.0864 ps=0.91 w=0.64 l=0.15
+X2072 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_4251_5487# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X2073 a_9771_10089# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X2080 vccd1 clkbuf_0_io_in[0].X a_2686_1679# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X2083 a_1956_20969# a_1683_20725# a_1874_20969# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0441 pd=0.63 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2089 a_7847_7663# _43_.X temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2091 vssd1 _44_.A a_4267_23555# vssd1 sky130_fd_pr__nfet_01v8 ad=0.101875 pd=0.99 as=0.0567 ps=0.69 w=0.42 l=0.15
+X2093 a_4590_1247# a_4422_1501# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1095 pd=1.075 as=0.178875 ps=1.26 w=0.75 l=0.15
+X2096 clkbuf_0_io_in[0].X a_2962_2767# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2105 a_5772_18231# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X2110 vssd1 _60_.Y a_10791_10927# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2113 vssd1 a_2686_1679# _76_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2114 a_4416_10089# a_4167_9839# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X2117 input6.X a_1591_14191# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.2054 pd=2.1 as=0.11455 ps=1.08 w=0.79 l=0.15
+X2118 vssd1 a_1753_1109# _74_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2125 _63_.A1 _43_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X2131 vccd1 a_9820_9991# a_9771_10089# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X2136 a_4893_18319# _38_.B1 _38_.Y vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X2140 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_1840_7913# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X2143 vccd1 a_5280_17143# _38_.B1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14075 pd=1.325 as=0.26 ps=2.52 w=1 l=0.15
+X2145 vssd1 temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A a_4932_16143# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+R10 hpretl_tt03_temperature_sensor_20.LO vssd1 sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X2153 a_3983_14191# _46_.X _60_.Y vssd1 sky130_fd_pr__nfet_01v8 ad=0.26975 pd=1.48 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2156 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_7663_16911# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2157 a_5723_15279# temp1.capload\[0\].cap.A temp1.capload\[7\].cap.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+R11 temp1.capload\[1\].cap.TE vssd1 sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X2161 a_1932_22057# a_1683_21807# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X2163 a_9820_9991# _60_.Y vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X2165 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_4416_10089# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X2171 a_2046_4399# a_1659_4373# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.066 pd=0.745 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2174 a_2686_1679# clkbuf_0_io_in[0].X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.265 ps=2.53 w=1 l=0.15
+X2175 vccd1 temp1.capload\[1\].cap.TE a_4259_20175# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2176 vccd1 clkbuf_0_io_in[0].X a_1753_1109# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.265 pd=2.53 as=0.14 ps=1.28 w=1 l=0.15
+X2177 vssd1 a_1753_1109# _74_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2182 a_4285_13985# del1.delay_chain\[3\].inv2.Y a_4199_13985# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.1176 ps=1.4 w=0.42 l=0.15
+X2183 a_1840_7913# a_1591_7663# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X2186 del2.delay_chain\[1\].inv2.A del2.delay_chain\[1\].inv1.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X2187 vssd1 _59_.A2 a_3713_10703# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2196 a_6374_19881# _58_.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.06825 pd=0.745 as=0.14825 ps=1.34 w=0.42 l=0.15
+X2202 io_out[0] a_1591_21271# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.097 ps=0.975 w=0.65 l=0.15
+X2207 a_3713_10703# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.104 pd=0.97 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2214 vccd1 a_7591_1403# io_out[4] vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X2222 a_5723_17999# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X2225 vssd1 _59_.A2 a_1591_17455# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2226 a_4149_1135# a_3983_1135# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0567 ps=0.69 w=0.42 l=0.15
+X2228 a_4847_1501# a_3983_1135# a_4590_1247# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0567 pd=0.69 as=0.1095 ps=1.075 w=0.42 l=0.15
+X2231 vccd1 _43_.X _59_.B1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.38 pd=2.76 as=0.135 ps=1.27 w=1 l=0.15
+X2232 a_4300_5639# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X2234 a_2965_20969# _58_.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0441 pd=0.63 as=0.15575 ps=1.355 w=0.42 l=0.15
+X2238 vssd1 _69_.A _35_.Y vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2250 a_9312_12015# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X2255 vssd1 _44_.B_N a_5271_14197# vssd1 sky130_fd_pr__nfet_01v8 ad=0.15645 pd=1.165 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2257 a_10875_15823# temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X2260 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A _50_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X2262 a_4852_19783# temp1.capload\[8\].cap_16.LO vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X2263 vccd1 _44_.B_N a_6511_19611# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2264 vccd1 a_1874_20969# _46_.X vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.31 pd=2.62 as=0.135 ps=1.27 w=1 l=0.15
+X2266 vccd1 a_5772_18231# a_5723_17999# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X2269 a_3713_10703# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+R12 temp1.capload\[0\].cap_8.HI vccd1 sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X2272 a_6567_16143# _59_.A2 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2289 vccd1 a_2111_4073# a_2118_3977# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0864 pd=0.91 as=0.1664 ps=1.8 w=0.64 l=0.15
+X2297 vssd1 a_3995_18793# _69_.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2298 _50_.X a_3622_12675# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.101875 ps=0.99 w=0.65 l=0.15
+X2299 vssd1 a_11201_16367# _59_.A2 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2302 a_2247_3311# a_2118_3585# a_1827_3285# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0989 pd=0.995 as=0.0684 ps=0.74 w=0.36 l=0.15
+X2303 vssd1 a_2191_8725# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2307 a_6567_16143# _63_.B2 _62_.Y vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2309 vccd1 a_10924_16055# a_10875_15823# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X2311 vssd1 a_1659_3285# io_out[6] vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2321 a_2392_11471# a_2143_11471# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X2323 a_1827_4373# a_2111_4373# a_2046_4399# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0684 pd=0.74 as=0.066 ps=0.745 w=0.36 l=0.15
+X2328 _63_.A1 _63_.B2 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X2329 a_11795_13647# temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X2330 vssd1 _63_.X a_6643_8527# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X2352 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_9135_12015# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2356 vccd1 a_6692_8439# a_6643_8207# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X2361 vssd1 a_2686_1679# _76_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2362 a_7166_1247# a_6998_1501# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0989 pd=0.995 as=0.12095 ps=1.085 w=0.64 l=0.15
+X2364 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_2392_11471# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X2368 vssd1 temp1.capload\[7\].cap_15.LO a_5723_15279# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X2372 vssd1 a_7591_1403# io_out[4] vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2376 vccd1 a_11844_13879# a_11795_13647# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X2384 a_7840_17231# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X2385 vccd1 _38_.Y a_2665_3311# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.05775 ps=0.695 w=0.42 l=0.15
+X2389 a_1591_17455# _59_.A2 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2391 _54_.A a_1591_15279# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1352 pd=1.56 as=0.0754 ps=0.81 w=0.52 l=0.15
+X2393 a_6692_18231# temp1.capload\[6\].cap.TE vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X2400 _59_.X a_3639_19087# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.182 pd=1.86 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2402 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z _59_.A1 a_7012_15055# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X2403 a_4051_2197# a_4219_2197# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2404 _76_.CLK a_2686_1679# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X2405 vccd1 a_4300_5639# a_4251_5737# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X2409 a_6643_8207# _63_.A1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X2410 vssd1 temp1.capload\[6\].cap.TE a_6643_18319# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X2411 _59_.B1 _43_.X a_1591_17455# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2412 vssd1 input6.X a_3622_12675# vssd1 sky130_fd_pr__nfet_01v8 ad=0.101875 pd=0.99 as=0.0567 ps=0.69 w=0.42 l=0.15
+X2416 vssd1 _35_.Y del1.delay_chain\[0\].inv2.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X2422 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE a_4259_14735# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2424 a_3713_10703# _59_.A2 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2427 a_2557_9001# _59_.A2 a_2191_8725# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X2433 _41_.A _38_.A1 a_2611_16617# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.36 ps=2.72 w=1 l=0.15
+X2437 vccd1 _59_.X a_6835_14735# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2438 a_1753_1109# clkbuf_0_io_in[0].X vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2441 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE _50_.X a_3713_10703# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2442 vssd1 _59_.A2 a_3713_10703# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2449 vssd1 a_2962_2767# clkbuf_0_io_in[0].X vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2453 a_4251_5737# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X2454 input6.X a_1591_14191# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1352 pd=1.56 as=0.0754 ps=0.81 w=0.52 l=0.15
+X2457 a_8004_13353# a_7755_13103# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X2458 a_2503_22671# temp1.capload\[0\].cap.A temp1.capload\[0\].cap.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X2459 a_1591_17455# _59_.A2 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2460 _76_.CLK a_2686_1679# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2461 vssd1 a_5015_1403# _58_.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2462 _74_.CLK a_1753_1109# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2464 _59_.B1 _43_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X2469 a_6515_3463# a_6787_3291# a_6745_3561# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.0441 ps=0.63 w=0.42 l=0.15
+X2471 vccd1 _41_.A _41_.Y vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X2472 vssd1 _34_.B a_3051_16367# vssd1 sky130_fd_pr__nfet_01v8 ad=0.18525 pd=1.87 as=0.089375 ps=0.925 w=0.65 l=0.15
+X2477 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_9312_12015# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X2480 vssd1 _44_.B_N a_4075_23799# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1575 pd=1.17 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2482 vssd1 _59_.A2 a_1591_17455# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2483 clkbuf_0_io_in[0].X a_2962_2767# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X2488 a_5261_12559# _59_.B1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1125 pd=1.225 as=0.26 ps=2.52 w=1 l=0.15
+X2490 io_out[7] a_2012_26677# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.17225 ps=1.83 w=0.65 l=0.15
+X2497 a_4431_14441# temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.28 pd=2.56 as=0.135 ps=1.27 w=1 l=0.15
+X2504 _46_.X a_1874_20969# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.14825 ps=1.34 w=1 l=0.15
+X2511 a_11040_11177# a_10791_10927# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X2512 vssd1 temp1.capload\[4\].cap_12.LO a_3983_20719# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2514 vssd1 _54_.X a_11201_16367# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2522 vccd1 clkbuf_0_io_in[0].X a_2686_1679# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X2527 a_1659_2197# a_1827_2197# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2533 clkbuf_0_io_in[0].X a_2962_2767# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2538 _62_.Y _63_.B2 a_6567_16143# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2540 a_2484_20175# a_2235_20175# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X2542 a_10280_14967# _63_.X vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X2551 vccd1 _44_.X _59_.A1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X2558 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_11040_11177# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X2563 a_2552_22583# temp1.capload\[0\].cap.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X2566 vccd1 a_2962_2767# clkbuf_0_io_in[0].X vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X2575 a_2687_12879# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X2577 vccd1 a_7423_1501# a_7591_1403# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.27 ps=2.54 w=1 l=0.15
+X2579 a_3639_19087# _44_.X a_3833_19087# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.4125 pd=1.825 as=0.105 ps=1.21 w=1 l=0.15
+X2580 a_1952_16367# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X2582 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_2484_20175# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X2588 vssd1 del1.delay_chain\[3\].inv2.Y a_4713_16367# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.10075 ps=0.96 w=0.65 l=0.15
+X2593 vccd1 a_3971_17973# _43_.X vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X2602 a_10231_15055# _63_.A1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X2606 a_7912_16911# a_7663_16911# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X2614 vssd1 _59_.A2 a_1591_17455# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2615 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_4344_9839# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X2620 a_5280_17143# _37_.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X2626 a_4961_17143# _38_.B1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.14075 ps=1.325 w=0.42 l=0.15
+X2631 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE a_2235_20175# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2632 a_1591_17455# _43_.X _59_.B1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2633 vssd1 a_2191_8725# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2634 del2.delay_chain\[2\].inv1.Y del2.delay_chain\[2\].inv1.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X2637 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE _59_.B1 a_3713_10703# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2638 a_3737_19407# _44_.X a_3828_19407# vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2639 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_1768_6351# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X2650 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_7912_16911# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X2656 vccd1 a_4847_1501# a_5015_1403# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.27 ps=2.54 w=1 l=0.15
+X2657 vssd1 a_2962_2767# clkbuf_0_io_in[0].X vssd1 sky130_fd_pr__nfet_01v8 ad=0.05775 pd=0.695 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2660 a_4422_1501# a_4149_1135# a_4337_1135# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.06825 pd=0.745 as=0.05775 ps=0.695 w=0.42 l=0.15
+X2661 a_3713_10703# _50_.X temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2666 a_7012_15055# _59_.X vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X2670 vssd1 temp1.capload\[0\].cap.TE a_2503_22671# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X2677 temp1.capload\[1\].cap.Z temp1.capload\[0\].cap.A a_4508_20175# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+R13 vccd1 io_out[1] sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X2684 vccd1 a_2318_2197# a_2247_2223# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.178875 pd=1.26 as=0.1095 ps=1.075 w=0.75 l=0.15
+X2686 vccd1 a_1591_4943# _38_.A1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X2693 vssd1 _44_.B_N a_6511_19611# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2695 a_4438_2223# a_4051_2197# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.066 pd=0.745 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2699 _54_.X a_5371_17705# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.14825 ps=1.34 w=1 l=0.15
+X2702 a_2915_8751# _50_.X a_2557_8751# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2705 vccd1 a_2686_1679# _76_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.265 pd=2.53 as=0.14 ps=1.28 w=1 l=0.15
+X2711 a_4944_19319# temp1.capload\[2\].cap_10.LO vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X2720 a_1768_7663# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X2724 vssd1 a_1659_4087# io_out[3] vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2732 vccd1 _58_.X a_3994_17455# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.165 pd=1.33 as=0.325 ps=2.65 w=1 l=0.15
+X2741 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_1860_21807# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X2744 vccd1 io_in[4] a_1591_9295# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.11455 pd=1.08 as=0.2054 ps=2.1 w=0.79 l=0.15
+X2748 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_5448_21583# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X2758 vccd1 a_4590_1247# a_4517_1501# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.178875 pd=1.26 as=0.07665 ps=0.785 w=0.42 l=0.15
+X2762 vccd1 _38_.B1 _66_.Y vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.182 pd=1.92 as=0.174 ps=1.39 w=0.7 l=0.15
+X2763 vssd1 clkbuf_0_io_in[0].X a_1753_1109# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2764 a_2111_4373# _74_.CLK vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0567 ps=0.69 w=0.42 l=0.15
+X2770 vssd1 a_4710_2197# a_4639_2223# vssd1 sky130_fd_pr__nfet_01v8 ad=0.12095 pd=1.085 as=0.0989 ps=0.995 w=0.64 l=0.15
+X2774 clkbuf_0_io_in[0].X a_2962_2767# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2776 a_4077_18793# _34_.B a_3995_18793# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0441 pd=0.63 as=0.1092 ps=1.36 w=0.42 l=0.15
+X2780 a_7847_7663# _50_.X vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2784 a_5204_15823# _59_.A2 a_4743_15823# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.105 pd=1.21 as=0.4125 ps=1.825 w=1 l=0.15
+X2785 vssd1 _68_.X a_2665_4399# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0813 ps=0.83 w=0.42 l=0.15
+X2792 a_3713_10703# _59_.B1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2793 a_2012_26677# _91_.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X2796 a_4199_13985# del1.delay_chain\[3\].inv2.Y vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0567 pd=0.69 as=0.1176 ps=1.4 w=0.42 l=0.15
+X2797 a_1827_4087# a_2111_4073# a_2046_4221# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0684 pd=0.74 as=0.066 ps=0.745 w=0.36 l=0.15
+X2799 a_4461_2589# a_4051_2197# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0882 pd=0.84 as=0.1113 ps=1.37 w=0.42 l=0.15
+X2805 vssd1 a_4678_17143# a_4627_16911# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.169 ps=1.82 w=0.65 l=0.15
+X2813 vssd1 a_5462_14441# _63_.B2 vssd1 sky130_fd_pr__nfet_01v8 ad=0.2015 pd=1.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2815 _43_.X a_3971_17973# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X2824 _76_.CLK a_2686_1679# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X2839 _44_.B_N a_1659_2197# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X2843 _53_.A a_4199_13985# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.475 pd=2.95 as=0.16655 ps=1.39 w=1 l=0.15
+X2846 vccd1 a_4495_16341# temp1.dcdc.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.3275 pd=1.655 as=0.28 ps=2.56 w=1 l=0.15
+X2850 del1.delay_chain\[3\].inv2.A del1.delay_chain\[2\].inv2.Y vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X2851 a_4219_2197# a_4503_2197# a_4438_2223# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0684 pd=0.74 as=0.066 ps=0.745 w=0.36 l=0.15
+X2862 a_3828_19407# _59_.B1 a_3737_19407# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.099125 ps=0.955 w=0.65 l=0.15
+X2863 vssd1 a_2962_2767# clkbuf_0_io_in[0].X vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2864 a_9771_9839# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X2870 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_2024_16617# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X2871 vssd1 _63_.A1 a_6567_16143# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.104 ps=0.97 w=0.65 l=0.15
+X2873 _74_.CLK a_1753_1109# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X2877 _74_.CLK a_1753_1109# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.1113 ps=1.37 w=0.42 l=0.15
+X2891 a_3051_16367# _58_.A _41_.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.089375 pd=0.925 as=0.091 ps=0.93 w=0.65 l=0.15
+X2895 a_6567_16143# _59_.A2 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+R14 temp1.capload\[9\].cap_17.HI vccd1 sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X2898 clkbuf_0_io_in[0].X a_2962_2767# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X2902 _76_.CLK a_2686_1679# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X2905 a_2467_4399# a_2247_4399# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0696 pd=0.765 as=0.12095 ps=1.085 w=0.42 l=0.15
+X2910 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_4508_14735# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X2915 a_2320_18543# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X2922 a_2962_2767# io_in[0] vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.265 ps=2.53 w=1 l=0.15
+X2931 vssd1 temp1.capload\[9\].cap.TE a_4159_15279# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X2934 _48_.A a_1591_12015# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.2054 pd=2.1 as=0.11455 ps=1.08 w=0.79 l=0.15
+X2942 a_6692_8439# _63_.X vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X2944 a_4893_18319# _38_.A1 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.10725 ps=0.98 w=0.65 l=0.15
+X2946 _63_.A1 _43_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X2947 vccd1 _58_.A a_4077_18793# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.15575 pd=1.355 as=0.0441 ps=0.63 w=0.42 l=0.15
+X2952 vccd1 temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A a_5204_15823# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.165 pd=1.33 as=0.105 ps=1.21 w=1 l=0.15
+X2959 a_2318_4373# a_2118_4673# a_2467_4399# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0621 pd=0.705 as=0.0696 ps=0.765 w=0.36 l=0.15
+X2962 vccd1 _43_.X _63_.A1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X2965 a_3983_14191# _59_.B1 _60_.Y vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2972 vssd1 _69_.A a_4893_18319# vssd1 sky130_fd_pr__nfet_01v8 ad=0.10725 pd=0.98 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2975 a_4503_2197# _74_.CLK vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1664 pd=1.8 as=0.0864 ps=0.91 w=0.64 l=0.15
+X2985 vccd1 temp1.capload\[0\].cap.A temp1.inv2.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X2986 _68_.X a_2695_21263# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.2054 pd=2.1 as=0.11455 ps=1.08 w=0.79 l=0.15
+X2989 vccd1 a_2111_4373# a_2118_4673# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0864 pd=0.91 as=0.1664 ps=1.8 w=0.64 l=0.15
+X2995 a_2557_8751# _59_.B1 a_2915_8751# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X2996 vccd1 a_1753_1109# _74_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X3003 a_1860_21807# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X3009 a_2665_4399# a_2111_4373# a_2318_4373# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0813 pd=0.83 as=0.0621 ps=0.705 w=0.36 l=0.15
+R15 vccd1 temp1.capload\[2\].cap_10.HI sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X3021 vssd1 _52_.B a_4285_13985# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1118 pd=1.04 as=0.0567 ps=0.69 w=0.42 l=0.15
+X3023 _59_.B1 _43_.X a_1591_17455# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3024 vccd1 a_7166_1247# a_7093_1501# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.178875 pd=1.26 as=0.07665 ps=0.785 w=0.42 l=0.15
+X3036 a_4300_5639# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X3042 vccd1 _34_.B a_2611_16617# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X3049 _58_.X a_2750_20693# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+R16 temp1.dac.vdac_single.einvp_batch\[0\].vref_18.HI vccd1 sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X3052 a_3983_14191# _59_.A2 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3059 vssd1 a_2111_4073# a_2118_3977# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3062 a_6725_1135# a_6559_1135# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1664 pd=1.8 as=0.0864 ps=0.91 w=0.64 l=0.15
+X3073 a_7093_1501# a_6559_1135# a_6998_1501# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.07665 pd=0.785 as=0.06825 ps=0.745 w=0.42 l=0.15
+X3079 vssd1 a_4961_17143# a_4774_16885# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.169 ps=1.82 w=0.65 l=0.15
+X3085 vccd1 a_2743_14954# _68_.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.11455 pd=1.08 as=0.2054 ps=2.1 w=0.79 l=0.15
+X3086 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE a_4995_20719# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3087 temp1.dac.parallel_cells\[0\].vdac_batch.einvp_batch\[0\].vref.TE _44_.X a_5261_12559# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.2325 pd=1.465 as=0.1125 ps=1.225 w=1 l=0.15
+R17 vccd1 temp1.capload\[5\].cap_13.HI sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X3093 a_5544_14441# a_5271_14197# a_5462_14441# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0441 pd=0.63 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3095 vssd1 io_in[4] a_1591_9295# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0754 pd=0.81 as=0.1352 ps=1.56 w=0.52 l=0.15
+X3096 _44_.A a_1591_7119# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1352 pd=1.56 as=0.0754 ps=0.81 w=0.52 l=0.15
+X3097 vccd1 a_1659_4373# io_out[5] vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X3102 a_1683_20725# _44_.B_N vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3107 a_1753_1109# clkbuf_0_io_in[0].X vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X3110 a_6515_3463# _44_.B_N vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.10025 ps=0.985 w=0.42 l=0.15
+X3111 a_2318_4373# a_2111_4373# a_2494_4765# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.06825 pd=0.745 as=0.07665 ps=0.785 w=0.42 l=0.15
+X3112 clkbuf_0_io_in[0].X a_2962_2767# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X3113 vssd1 _59_.A2 a_6567_16143# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3114 vssd1 a_11201_16367# _59_.A2 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3115 vccd1 del2.delay_chain\[3\].inv1.Y _42_.B vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X3116 a_3104_21959# temp1.capload\[3\].cap_11.LO vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X3118 vssd1 _68_.A a_2695_21263# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0754 pd=0.81 as=0.1352 ps=1.56 w=0.52 l=0.15
+X3122 a_6567_16143# _63_.B2 _62_.Y vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3123 a_4847_1501# a_4149_1135# a_4590_1247# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0684 pd=0.74 as=0.0989 ps=0.995 w=0.36 l=0.15
+X3127 a_3472_13879# temp1.dac.parallel_cells\[0\].vdac_batch.einvp_batch\[0\].vref.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X3130 temp1.capload\[0\].cap.A temp1.dcdc.A a_2320_18543# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X3136 vssd1 _62_.Y a_3975_16143# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X3137 vssd1 a_3622_12675# _50_.X vssd1 sky130_fd_pr__nfet_01v8 ad=0.2015 pd=1.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3138 _59_.A2 a_11201_16367# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3147 del2.delay_chain\[2\].inv2.Y del2.delay_chain\[2\].inv1.Y vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X3149 _62_.Y _63_.B2 a_6567_16143# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3152 vccd1 a_1659_3285# io_out[6] vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X3156 a_2494_4765# a_2247_4399# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.07665 pd=0.785 as=0.178875 ps=1.26 w=0.42 l=0.15
+X3157 a_1827_3285# a_2118_3585# a_2069_3677# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0567 pd=0.69 as=0.0882 ps=0.84 w=0.42 l=0.15
+X3158 a_4232_20969# a_3983_20719# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X3161 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_3036_6825# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X3166 a_4024_16055# _62_.Y vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X3168 vccd1 _63_.B2 _63_.A1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X3176 vccd1 io_in[6] a_1591_14191# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.11455 pd=1.08 as=0.2054 ps=2.1 w=0.79 l=0.15
+X3185 a_4193_17705# _59_.B1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1125 pd=1.225 as=0.165 ps=1.33 w=1 l=0.15
+X3186 a_2611_16617# _34_.B vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.28 pd=2.56 as=0.14 ps=1.28 w=1 l=0.15
+X3187 del1.delay_chain\[2\].inv1.A del1.delay_chain\[1\].inv1.Y vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X3190 vssd1 del2.delay_chain\[1\].inv2.A del2.delay_chain\[2\].inv1.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X3192 vssd1 a_1753_1109# _74_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X3196 _60_.Y _59_.B1 a_3983_14191# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.182 ps=1.86 w=0.65 l=0.15
+X3201 a_4937_15823# _59_.B1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.105 pd=1.21 as=0.165 ps=1.33 w=1 l=0.15
+X3203 vccd1 del2.delay_chain\[0\].inv2.A del2.delay_chain\[1\].inv1.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X3204 vssd1 a_2111_3285# a_2118_3585# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3207 a_3036_6825# a_2787_6575# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X3209 temp1.capload\[4\].cap.Z temp1.capload\[0\].cap.A a_4232_20969# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X3215 vccd1 a_1753_1109# _74_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1375 pd=1.275 as=0.14 ps=1.28 w=1 l=0.15
+X3217 a_6725_1135# a_6559_1135# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0567 ps=0.69 w=0.42 l=0.15
+X3221 a_4841_16143# _46_.X a_4932_16143# vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3228 vssd1 a_2318_2197# a_2247_2223# vssd1 sky130_fd_pr__nfet_01v8 ad=0.12095 pd=1.085 as=0.0989 ps=0.995 w=0.64 l=0.15
+X3229 _59_.B1 _43_.X a_1591_17455# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3231 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE a_3055_9615# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X3232 vssd1 _59_.B1 a_7755_13103# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3233 del2.delay_chain\[0\].inv1.A a_4995_13647# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.2054 pd=2.1 as=0.11455 ps=1.08 w=0.79 l=0.15
+X3238 vccd1 a_2962_2767# clkbuf_0_io_in[0].X vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X3242 vssd1 a_2686_1679# _76_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X3247 a_1591_17455# _43_.X _59_.B1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3248 a_3423_13647# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X3249 vssd1 _44_.B_N a_3431_12919# vssd1 sky130_fd_pr__nfet_01v8 ad=0.15645 pd=1.165 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3253 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.vdac_single.einvp_batch\[0\].pupd_19.HI a_7932_13103# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X3256 vccd1 a_2736_12791# a_2687_12559# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X3260 a_2069_2589# a_1659_2197# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.0882 pd=0.84 as=0.1113 ps=1.37 w=0.42 l=0.15
+X3262 a_2318_4132# a_2111_4073# a_2494_3855# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.06825 pd=0.745 as=0.07665 ps=0.785 w=0.42 l=0.15
+X3269 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_2787_6575# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3270 a_4436_20495# temp1.capload\[1\].cap.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X3272 a_2247_4399# a_2118_4673# a_1827_4373# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0989 pd=0.995 as=0.0684 ps=0.74 w=0.36 l=0.15
+X3273 a_4803_19881# temp1.capload\[0\].cap.A temp1.capload\[8\].cap.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X3274 a_2611_16617# _38_.A1 _41_.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X3275 _48_.A a_1591_12015# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1352 pd=1.56 as=0.0754 ps=0.81 w=0.52 l=0.15
+X3276 a_2665_4399# a_2118_4673# a_2318_4373# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.05775 pd=0.695 as=0.06825 ps=0.745 w=0.42 l=0.15
+X3280 vssd1 a_1659_4373# io_out[5] vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3286 a_3240_14191# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X3290 vssd1 _59_.A2 a_3983_14191# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.26975 ps=1.48 w=0.65 l=0.15
+X3294 a_5612_11177# a_5363_10927# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X3296 vssd1 io_in[0] a_2962_2767# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X3298 _62_.Y _59_.B1 a_6567_16143# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3307 vccd1 a_3472_13879# a_3423_13647# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X3311 _74_.CLK a_1753_1109# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X3312 a_2494_3855# a_2247_4233# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.07665 pd=0.785 as=0.178875 ps=1.26 w=0.42 l=0.15
+X3318 a_2024_16617# a_1775_16367# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X3328 vccd1 a_4852_19783# a_4803_19881# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X3340 _54_.A a_1591_15279# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.2054 pd=2.1 as=0.11455 ps=1.08 w=0.79 l=0.15
+X3346 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE a_1683_21807# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3347 _76_.CLK a_2686_1679# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.05775 ps=0.695 w=0.42 l=0.15
+X3350 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z _63_.A1 a_5612_11177# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X3352 a_3995_18793# _34_.B vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3354 _63_.X a_3994_17455# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3358 _52_.B a_1591_5487# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.2054 pd=2.1 as=0.11455 ps=1.08 w=0.79 l=0.15
+X3362 _59_.A2 a_11201_16367# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3368 vccd1 _43_.X temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X3369 _43_.X a_3971_17973# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X3371 del2.delay_chain\[3\].inv1.Y del2.delay_chain\[2\].inv2.Y vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X3372 _62_.Y _59_.B1 a_6567_16143# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+R18 temp1.capload\[4\].cap_12.LO vssd1 sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X3375 a_5723_16367# temp1.capload\[0\].cap.A temp1.capload\[5\].cap.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X3377 a_1659_2197# a_1827_2197# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.135 ps=1.27 w=1 l=0.15
+X3383 a_2247_2223# a_2111_2197# a_1827_2197# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1095 pd=1.075 as=0.0567 ps=0.69 w=0.42 l=0.15
+X3389 vccd1 a_2012_26677# io_out[7] vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.149 pd=1.325 as=0.135 ps=1.27 w=1 l=0.15
+X3392 a_4324_13353# a_4075_13103# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X3394 a_4422_1501# a_3983_1135# a_4337_1135# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0621 pd=0.705 as=0.0813 ps=0.83 w=0.36 l=0.15
+X3411 vccd1 a_5015_1403# _58_.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X3413 a_4710_2197# a_4503_2197# a_4886_2589# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.06825 pd=0.745 as=0.07665 ps=0.785 w=0.42 l=0.15
+X3417 vccd1 _58_.X a_3639_19087# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.165 pd=1.33 as=0.34 ps=2.68 w=1 l=0.15
+X3418 temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.TE a_4743_15823# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.28 pd=2.56 as=0.165 ps=1.33 w=1 l=0.15
+X3419 vssd1 _50_.X a_7847_7663# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X3426 vssd1 clkbuf_0_io_in[0].X a_1753_1109# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1113 pd=1.37 as=0.0588 ps=0.7 w=0.42 l=0.15
+X3427 a_2665_4233# a_2118_3977# a_2318_4132# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.05775 pd=0.695 as=0.06825 ps=0.745 w=0.42 l=0.15
+X3430 a_2964_6575# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X3432 del1.delay_chain\[2\].inv2.A del1.delay_chain\[2\].inv1.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X3436 clkbuf_0_io_in[0].X a_2962_2767# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X3442 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_1591_7663# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3446 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z _63_.A1 a_4324_13353# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X3449 a_7166_1247# a_6998_1501# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1095 pd=1.075 as=0.178875 ps=1.26 w=0.75 l=0.15
+X3450 vssd1 _60_.Y a_9771_9839# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X3453 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_2191_8725# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X3457 a_4713_16367# _58_.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3458 a_2111_2197# _76_.CLK vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1664 pd=1.8 as=0.0864 ps=0.91 w=0.64 l=0.15
+X3459 a_4859_2223# a_4639_2223# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0696 pd=0.765 as=0.12095 ps=1.085 w=0.42 l=0.15
+X3460 a_4548_1135# a_4149_1135# a_4422_1501# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0696 pd=0.765 as=0.0621 ps=0.705 w=0.36 l=0.15
+X3465 a_4100_19087# _59_.A2 a_3639_19087# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.105 pd=1.21 as=0.4125 ps=1.825 w=1 l=0.15
+X3466 a_3971_17973# _42_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X3467 a_2318_4132# a_2118_3977# a_2467_4221# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0621 pd=0.705 as=0.0696 ps=0.765 w=0.36 l=0.15
+X3468 a_4886_2589# a_4639_2223# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.07665 pd=0.785 as=0.178875 ps=1.26 w=0.42 l=0.15
+X3474 vssd1 io_in[7] a_1591_15279# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0754 pd=0.81 as=0.1352 ps=1.56 w=0.52 l=0.15
+X3478 vccd1 a_2962_2767# clkbuf_0_io_in[0].X vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.265 pd=2.53 as=0.14 ps=1.28 w=1 l=0.15
+R19 vccd1 temp1.capload\[3\].cap_11.HI sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X3484 a_1659_4087# a_1827_4087# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.135 ps=1.27 w=1 l=0.15
+X3488 a_2750_20693# _58_.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.10675 ps=1.005 w=0.42 l=0.15
+X3494 vssd1 _46_.A a_1874_20969# vssd1 sky130_fd_pr__nfet_01v8 ad=0.101875 pd=0.99 as=0.0567 ps=0.69 w=0.42 l=0.15
+X3503 vccd1 _59_.B1 a_2997_9001# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X3507 a_4710_2197# a_4510_2497# a_4859_2223# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0621 pd=0.705 as=0.0696 ps=0.765 w=0.36 l=0.15
+X3509 vssd1 a_4590_1247# a_4548_1135# vssd1 sky130_fd_pr__nfet_01v8 ad=0.12095 pd=1.085 as=0.0696 ps=0.765 w=0.42 l=0.15
+X3510 vssd1 a_2318_4132# a_2247_4233# vssd1 sky130_fd_pr__nfet_01v8 ad=0.12095 pd=1.085 as=0.0989 ps=0.995 w=0.64 l=0.15
+X3513 a_2665_4233# a_2111_4073# a_2318_4132# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0813 pd=0.83 as=0.0621 ps=0.705 w=0.36 l=0.15
+X3521 vssd1 a_1874_20969# _46_.X vssd1 sky130_fd_pr__nfet_01v8 ad=0.2015 pd=1.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3522 vssd1 io_in[6] a_1591_14191# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0754 pd=0.81 as=0.1352 ps=1.56 w=0.52 l=0.15
+X3526 a_6567_16143# _63_.A1 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3529 a_6567_16143# _59_.B1 _62_.Y vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3539 a_4895_19087# temp1.capload\[0\].cap.A temp1.capload\[2\].cap.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X3544 vssd1 _44_.B_N a_5179_17461# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1575 pd=1.17 as=0.1092 ps=1.36 w=0.42 l=0.15
+R20 temp1.capload\[7\].cap_15.HI vccd1 sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X3579 vccd1 io_in[3] a_1591_7119# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.11455 pd=1.08 as=0.2054 ps=2.1 w=0.79 l=0.15
+X3581 vccd1 a_4944_19319# a_4895_19087# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X3582 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_10968_10927# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1755 pd=1.84 as=0.235625 ps=1.375 w=0.65 l=0.15
+X3587 vccd1 _44_.A a_4349_23555# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14825 pd=1.34 as=0.0441 ps=0.63 w=0.42 l=0.15
+X3588 vssd1 temp1.capload\[5\].cap_13.LO a_5723_16367# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X3601 vccd1 _68_.X a_2665_4399# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.05775 ps=0.695 w=0.42 l=0.15
+X3605 a_2743_14954# _38_.A1 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1352 pd=1.56 as=0.0754 ps=0.81 w=0.52 l=0.15
+X3612 vccd1 io_in[0] a_2962_2767# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X3615 vccd1 _59_.A1 a_4100_19087# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.165 pd=1.33 as=0.105 ps=1.21 w=1 l=0.15
+X3616 _59_.B1 _59_.A2 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X3617 a_4337_1135# _41_.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0813 pd=0.83 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3627 a_12120_13255# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X3629 vssd1 a_1591_4943# _38_.A1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0567 ps=0.69 w=0.42 l=0.15
+X3637 vccd1 _59_.A2 _59_.B1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X3638 vccd1 _62_.Y a_1591_6031# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3640 vccd1 del1.delay_chain\[3\].inv2.A del1.delay_chain\[3\].inv2.Y vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X3642 a_6643_18319# temp1.capload\[0\].cap.A temp1.capload\[6\].cap.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X3650 vccd1 _52_.B a_4199_13985# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.16655 pd=1.39 as=0.0567 ps=0.69 w=0.42 l=0.15
+X3652 vccd1 a_1753_1109# _74_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X3664 _76_.CLK a_2686_1679# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X3665 a_11201_16367# _54_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X3668 vccd1 _50_.X temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X3672 vssd1 a_2686_1679# _76_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X3674 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_1591_7663# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3678 _52_.B a_1591_5487# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1352 pd=1.56 as=0.0754 ps=0.81 w=0.52 l=0.15
+X3687 vccd1 a_1591_21271# io_out[0] vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.265 pd=2.53 as=0.135 ps=1.27 w=1 l=0.15
+X3697 vssd1 temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.TE a_10875_16143# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X3699 a_4508_20175# a_4259_20175# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X3706 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_4167_9839# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3713 a_4436_15055# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X3715 vssd1 a_3971_17973# _43_.X vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3718 a_2557_8751# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3720 vssd1 temp1.capload\[2\].cap_10.LO a_4895_19407# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X3721 a_4678_17143# a_4774_16885# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X3723 a_10924_16055# temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.TE vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X3724 a_1659_3285# a_1827_3285# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3726 _46_.X a_1874_20969# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.101875 ps=0.99 w=0.65 l=0.15
+X3734 vccd1 _69_.Y a_2665_4233# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.05775 ps=0.695 w=0.42 l=0.15
+X3737 vssd1 _59_.A2 a_6567_16143# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3738 a_9135_14191# _63_.B2 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3740 _44_.X a_4267_23555# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.14825 ps=1.34 w=1 l=0.15
+X3741 a_5244_20969# a_4995_20719# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X3744 vccd1 a_2686_1679# _76_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X3745 a_2247_4233# a_2118_3977# a_1827_4087# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0989 pd=0.995 as=0.0684 ps=0.74 w=0.36 l=0.15
+X3755 a_6567_16143# _63_.A1 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3763 a_4267_23555# a_4075_23799# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.1575 ps=1.17 w=0.42 l=0.15
+X3765 vccd1 _59_.A2 _59_.B1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X3770 _62_.Y _59_.A2 a_7331_15823# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X3776 vccd1 a_5015_1403# a_4931_1501# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1113 pd=1.37 as=0.0882 ps=0.84 w=0.42 l=0.15
+X3778 a_4159_15279# temp1.capload\[0\].cap.A temp1.capload\[9\].cap.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X3780 a_11844_13879# temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.TE vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X3782 vccd1 _43_.X _63_.A1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X3783 a_2191_8725# _58_.X a_2915_8751# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3785 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_5244_20969# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X3786 a_4639_2223# a_4510_2497# a_4219_2197# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0989 pd=0.995 as=0.0684 ps=0.74 w=0.36 l=0.15
+X3788 a_3994_17455# _63_.B2 a_4193_17705# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.3875 pd=1.775 as=0.1125 ps=1.225 w=1 l=0.15
+X3789 vccd1 _59_.B1 a_7755_13103# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3798 _62_.Y _63_.B2 a_6649_15823# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X3810 a_3104_9527# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X3819 _60_.Y _46_.X a_3983_14191# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3823 a_3055_22057# temp1.capload\[0\].cap.A temp1.capload\[3\].cap.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X3826 a_4932_16143# _59_.B1 a_4841_16143# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.099125 ps=0.955 w=0.65 l=0.15
+X3831 vssd1 _44_.B_N a_2750_20693# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0567 ps=0.69 w=0.42 l=0.15
+X3834 io_out[2] a_4051_2197# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X3835 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A a_2557_9001# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.395 pd=1.79 as=0.135 ps=1.27 w=1 l=0.15
+X3849 a_7084_14735# a_6835_14735# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X3850 vccd1 _58_.A a_6787_3291# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3856 a_6515_3463# a_6787_3291# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.0567 ps=0.69 w=0.42 l=0.15
+X3859 a_3833_19087# _59_.B1 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.105 pd=1.21 as=0.165 ps=1.33 w=1 l=0.15
+X3862 vssd1 _63_.X a_5363_10927# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3870 a_4495_16341# _44_.B_N vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.195 pd=1.39 as=0.3275 ps=1.655 w=1 l=0.15
+X3871 _76_.CLK a_2686_1679# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X3876 vccd1 a_3104_21959# a_3055_22057# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X3877 a_1591_17455# _43_.X _59_.B1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3880 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A _43_.X a_7847_7663# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3884 vccd1 del1.delay_chain\[0\].inv2.A del1.delay_chain\[1\].inv1.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X3887 vccd1 a_1753_1109# _74_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X3889 vccd1 a_2962_2767# clkbuf_0_io_in[0].X vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X3893 a_2611_16617# _58_.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.135 ps=1.27 w=1 l=0.15
+X3898 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z _59_.A1 a_7084_14735# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X3899 vccd1 a_2750_20693# _58_.X vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.15575 pd=1.355 as=0.135 ps=1.27 w=1 l=0.15
+X3900 vccd1 a_2318_3285# a_2247_3311# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.178875 pd=1.26 as=0.1095 ps=1.075 w=0.75 l=0.15
+X3903 vssd1 _44_.B_N _34_.B vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3905 vssd1 temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A a_3983_14191# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3906 vccd1 _35_.Y del1.delay_chain\[0\].inv2.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.26 ps=2.52 w=1 l=0.15
+X3913 io_out[0] a_1591_21271# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.149 ps=1.325 w=1 l=0.15
+R21 vssd1 temp1.capload\[9\].cap.TE sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X3926 temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A _43_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+R22 temp1.capload\[8\].cap_16.LO vssd1 sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X3936 del2.delay_chain\[1\].inv2.A del2.delay_chain\[1\].inv1.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X3938 a_4508_14735# a_4259_14735# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X3946 a_2962_2767# io_in[0] vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X3951 a_2686_1679# clkbuf_0_io_in[0].X vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X3955 a_2736_12791# temp1.dac.vdac_single.einvp_batch\[0\].vref_18.LO vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X3956 a_4075_23799# _44_.B_N vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1176 pd=1.4 as=0.1092 ps=1.36 w=0.42 l=0.15
+R23 vssd1 temp1.dac.vdac_single.einvp_batch\[0\].vref_18.LO sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X3966 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE a_5271_21263# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X3967 a_5723_18319# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.1755 ps=1.84 w=0.65 l=0.15
+X3968 vssd1 _63_.B2 a_9135_14191# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X3973 _59_.A2 a_11201_16367# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3985 _63_.B2 a_5462_14441# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.14825 ps=1.34 w=1 l=0.15
+X3987 io_out[7] a_2012_26677# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.265 ps=2.53 w=1 l=0.15
+X3999 vssd1 a_11201_16367# _59_.A2 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X4002 vssd1 temp1.capload\[3\].cap_11.LO a_3055_21807# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X4008 vccd1 io_in[5] a_1591_12015# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.11455 pd=1.08 as=0.2054 ps=2.1 w=0.79 l=0.15
+X4009 vccd1 a_2686_1679# _76_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1375 pd=1.275 as=0.14 ps=1.28 w=1 l=0.15
+X4019 a_3312_14441# a_3063_14191# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.32075 ps=1.685 w=1 l=0.15
+X4020 _50_.X a_3622_12675# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.14825 ps=1.34 w=1 l=0.15
+X4029 a_6649_15823# _63_.B2 _62_.Y vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X4033 vssd1 temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.TE a_11795_13967# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X4048 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_2191_8725# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X4053 io_out[6] a_1659_3285# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X4054 vccd1 _68_.A a_2695_21263# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.11455 pd=1.08 as=0.2054 ps=2.1 w=0.79 l=0.15
+X4057 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z a_3312_14441# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.27 pd=2.54 as=0.1825 ps=1.365 w=1 l=0.15
+X4070 vccd1 a_2962_2767# clkbuf_0_io_in[0].X vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X4071 _58_.A a_5015_1403# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X4072 vccd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_2787_6575# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X4077 a_1874_20969# a_1683_20725# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.15645 ps=1.165 w=0.42 l=0.15
+X4086 _76_.CLK a_2686_1679# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X4087 clkbuf_0_io_in[0].X a_2962_2767# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.05775 ps=0.695 w=0.42 l=0.15
+X4094 a_6239_19783# a_6511_19611# a_6469_19881# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.0441 ps=0.63 w=0.42 l=0.15
+X4095 vccd1 _43_.X temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X4097 a_5772_15431# temp1.capload\[7\].cap_15.LO vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X4098 a_10231_14735# _63_.A1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X4102 a_5179_17461# _44_.B_N vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1176 pd=1.4 as=0.1092 ps=1.36 w=0.42 l=0.15
+X4104 a_5271_14197# _44_.B_N vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.1092 ps=1.36 w=0.42 l=0.15
+X4110 vssd1 del2.delay_chain\[0\].inv1.A del2.delay_chain\[0\].inv2.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X4113 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_7663_16911# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X4116 _74_.CLK a_1753_1109# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X4118 io_out[4] a_7591_1403# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X4121 a_2557_8751# _50_.X a_2915_8751# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+R24 vccd1 temp1.capload\[1\].cap_9.HI sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X4138 a_6567_16143# _59_.B1 _62_.Y vssd1 sky130_fd_pr__nfet_01v8 ad=0.104 pd=0.97 as=0.08775 ps=0.92 w=0.65 l=0.15
+X4147 a_1659_4087# a_1827_4087# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X4149 vccd1 _46_.X temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X4152 vccd1 a_10280_14967# a_10231_14735# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X4155 a_3983_14441# _46_.X _60_.Y vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.28 pd=2.56 as=0.135 ps=1.27 w=1 l=0.15
+X4159 vccd1 _60_.Y a_10791_10927# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1092 ps=1.36 w=0.42 l=0.15
+X4162 a_5723_15529# temp1.capload\[0\].cap.A temp1.capload\[7\].cap.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X4165 a_2503_22351# temp1.capload\[0\].cap.A temp1.capload\[0\].cap.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+R25 temp1.dac.vdac_single.einvp_batch\[0\].pupd_19.LO vssd1 sky130_fd_pr__res_generic_po w=0.48 l=0.045
+X4166 clkbuf_0_io_in[0].X a_2962_2767# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X4167 a_3795_10383# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.29 ps=2.58 w=1 l=0.15
+X4170 vssd1 _63_.X a_4075_13103# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X4175 vssd1 temp1.capload\[1\].cap.TE a_4259_20175# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.1092 ps=1.36 w=0.42 l=0.15
+X4176 a_4181_17455# _59_.A2 vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X4177 a_5772_18231# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X4180 vssd1 a_2111_4373# a_2118_4673# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.1092 ps=1.36 w=0.42 l=0.15
+X4181 _41_.Y _41_.A vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X4182 vccd1 a_2686_1679# _76_.CLK vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X4188 a_12120_13255# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X4192 vssd1 _58_.A a_3995_18793# vssd1 sky130_fd_pr__nfet_01v8 ad=0.10675 pd=1.005 as=0.0567 ps=0.69 w=0.42 l=0.15
+X4193 vssd1 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE a_5723_18319# vssd1 sky130_fd_pr__nfet_01v8 ad=0.097 pd=0.975 as=0.235625 ps=1.375 w=0.65 l=0.15
+X4197 vssd1 a_3994_17455# _63_.X vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X4199 a_6692_8439# _63_.X vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1092 pd=1.36 as=0.32075 ps=1.685 w=0.42 l=0.15
+X4201 a_2191_8725# _59_.A2 a_2557_9001# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X4203 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A _43_.X a_7847_7663# vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X4206 vccd1 a_5772_15431# a_5723_15529# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X4211 vccd1 a_2552_22583# a_2503_22351# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X4227 _74_.CLK a_1753_1109# vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14 pd=1.28 as=0.14 ps=1.28 w=1 l=0.15
+X4228 vssd1 _54_.A a_5371_17705# vssd1 sky130_fd_pr__nfet_01v8 ad=0.101875 pd=0.99 as=0.0567 ps=0.69 w=0.42 l=0.15
+X4230 vssd1 temp1.capload\[0\].cap.A temp1.inv2.A vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X4231 a_9820_9991# _60_.Y vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X4235 _59_.B1 _59_.A2 vccd1 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X4237 _58_.A a_5015_1403# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X4238 vccd1 _58_.X a_2191_8725# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X4242 a_4160_20719# temp1.capload\[4\].cap_12.LO vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.235625 pd=1.375 as=0.097 ps=0.975 w=0.65 l=0.15
+X4244 vssd1 _48_.A a_5462_14441# vssd1 sky130_fd_pr__nfet_01v8 ad=0.101875 pd=0.99 as=0.0567 ps=0.69 w=0.42 l=0.15
+X4249 vssd1 a_1753_1109# _74_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X4252 vssd1 _38_.A1 a_2419_16143# vssd1 sky130_fd_pr__nfet_01v8 ad=0.10725 pd=0.98 as=0.169 ps=1.82 w=0.65 l=0.15
+X4261 vccd1 a_3104_9527# a_3055_9295# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.32075 pd=1.685 as=0.1825 ps=1.365 w=1 l=0.15
+X4264 a_2046_2223# a_1659_2197# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.066 pd=0.745 as=0.1092 ps=1.36 w=0.42 l=0.15
+X4272 vssd1 a_2686_1679# _76_.CLK vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X4275 vssd1 _58_.A a_6787_3291# vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.1092 ps=1.36 w=0.42 l=0.15
+X4283 vssd1 del1.delay_chain\[1\].inv1.A del1.delay_chain\[1\].inv1.Y vssd1 sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.169 ps=1.82 w=0.65 l=0.15
+X4284 a_2687_12559# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X4294 a_4208_15431# temp1.capload\[9\].cap.TE vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.1092 pd=1.36 as=0.097 ps=0.975 w=0.42 l=0.15
+X4296 _58_.X a_2750_20693# vssd1 vssd1 sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+X4297 vssd1 clkbuf_0_io_in[0].X a_2686_1679# vssd1 sky130_fd_pr__nfet_01v8 ad=0.0588 pd=0.7 as=0.0588 ps=0.7 w=0.42 l=0.15
+X4301 a_3055_9295# temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.1825 pd=1.365 as=0.27 ps=2.54 w=1 l=0.15
+X4302 vccd1 a_6239_19783# _42_.X vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14825 pd=1.34 as=0.275 ps=2.55 w=1 l=0.15
+X4303 vccd1 a_4678_17143# a_4627_16911# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.14075 pd=1.325 as=0.26 ps=2.52 w=1 l=0.15
+X4304 vccd1 _53_.A a_4995_13647# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.11455 pd=1.08 as=0.2054 ps=2.1 w=0.79 l=0.15
+X4306 vccd1 a_11201_16367# _59_.A2 vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X4326 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE _59_.A2 a_3795_10383# vccd1 sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+C0 io_out[4] vssd1 13.43fF
+C1 a_6913_1135# vssd1 0.23fF $ **FLOATING
+C2 a_7423_1501# vssd1 0.61fF $ **FLOATING
+C3 a_7591_1403# vssd1 0.97fF $ **FLOATING
+C4 a_6998_1501# vssd1 0.63fF $ **FLOATING
+C5 a_7166_1247# vssd1 0.58fF $ **FLOATING
+C6 a_6725_1135# vssd1 1.43fF $ **FLOATING
+C7 a_6559_1135# vssd1 1.81fF $ **FLOATING
+C8 a_4337_1135# vssd1 0.23fF $ **FLOATING
+C9 a_4847_1501# vssd1 0.61fF $ **FLOATING
+C10 a_5015_1403# vssd1 0.97fF $ **FLOATING
+C11 a_4422_1501# vssd1 0.63fF $ **FLOATING
+C12 a_4590_1247# vssd1 0.58fF $ **FLOATING
+C13 a_4149_1135# vssd1 1.43fF $ **FLOATING
+C14 a_3983_1135# vssd1 1.81fF $ **FLOATING
+C15 a_1753_1109# vssd1 4.03fF $ **FLOATING
+C16 a_2686_1679# vssd1 4.03fF $ **FLOATING
+C17 a_5057_2223# vssd1 0.23fF $ **FLOATING
+C18 io_out[2] vssd1 9.78fF
+C19 a_4639_2223# vssd1 0.58fF $ **FLOATING
+C20 a_4710_2197# vssd1 0.63fF $ **FLOATING
+C21 a_4503_2197# vssd1 1.81fF $ **FLOATING
+C22 a_4510_2497# vssd1 1.43fF $ **FLOATING
+C23 a_4219_2197# vssd1 0.61fF $ **FLOATING
+C24 a_4051_2197# vssd1 0.97fF $ **FLOATING
+C25 a_2665_2223# vssd1 0.23fF $ **FLOATING
+C26 a_2247_2223# vssd1 0.58fF $ **FLOATING
+C27 a_2318_2197# vssd1 0.63fF $ **FLOATING
+C28 a_2111_2197# vssd1 1.81fF $ **FLOATING
+C29 a_2118_2497# vssd1 1.43fF $ **FLOATING
+C30 a_1827_2197# vssd1 0.61fF $ **FLOATING
+C31 a_1659_2197# vssd1 0.97fF $ **FLOATING
+C32 clkbuf_0_io_in[0].X vssd1 5.24fF $ **FLOATING
+C33 a_2962_2767# vssd1 4.03fF $ **FLOATING
+C34 io_in[0] vssd1 2.79fF
+C35 a_6787_3291# vssd1 0.43fF $ **FLOATING
+C36 a_6515_3463# vssd1 0.67fF $ **FLOATING
+C37 a_2665_3311# vssd1 0.23fF $ **FLOATING
+C38 io_out[6] vssd1 12.32fF
+C39 a_2247_3311# vssd1 0.58fF $ **FLOATING
+C40 a_2318_3285# vssd1 0.63fF $ **FLOATING
+C41 a_2111_3285# vssd1 1.81fF $ **FLOATING
+C42 a_2118_3585# vssd1 1.43fF $ **FLOATING
+C43 a_1827_3285# vssd1 0.61fF $ **FLOATING
+C44 a_1659_3285# vssd1 0.97fF $ **FLOATING
+C45 a_2665_4233# vssd1 0.23fF $ **FLOATING
+C46 _76_.CLK vssd1 4.66fF $ **FLOATING
+C47 a_2247_4233# vssd1 0.58fF $ **FLOATING
+C48 a_2318_4132# vssd1 0.63fF $ **FLOATING
+C49 a_2118_3977# vssd1 1.43fF $ **FLOATING
+C50 a_2111_4073# vssd1 1.81fF $ **FLOATING
+C51 a_1827_4087# vssd1 0.61fF $ **FLOATING
+C52 a_1659_4087# vssd1 0.97fF $ **FLOATING
+C53 _74_.CLK vssd1 8.11fF $ **FLOATING
+C54 a_2665_4399# vssd1 0.23fF $ **FLOATING
+C55 io_out[5] vssd1 11.29fF
+C56 a_2247_4399# vssd1 0.58fF $ **FLOATING
+C57 a_2318_4373# vssd1 0.63fF $ **FLOATING
+C58 a_2111_4373# vssd1 1.81fF $ **FLOATING
+C59 a_2118_4673# vssd1 1.43fF $ **FLOATING
+C60 a_1827_4373# vssd1 0.61fF $ **FLOATING
+C61 a_1659_4373# vssd1 0.97fF $ **FLOATING
+C62 a_1591_4943# vssd1 0.70fF $ **FLOATING
+C63 io_in[1] vssd1 1.78fF
+C64 a_4300_5639# vssd1 0.53fF $ **FLOATING
+C65 a_1591_5487# vssd1 0.52fF $ **FLOATING
+C66 io_in[2] vssd1 1.22fF
+C67 a_1591_6031# vssd1 0.53fF $ **FLOATING
+C68 a_2787_6575# vssd1 0.53fF $ **FLOATING
+C69 a_1591_7119# vssd1 0.52fF $ **FLOATING
+C70 io_in[3] vssd1 1.35fF
+C71 a_7847_7663# vssd1 0.51fF $ **FLOATING
+C72 a_1591_7663# vssd1 0.53fF $ **FLOATING
+C73 a_6692_8439# vssd1 0.53fF $ **FLOATING
+C74 a_2915_8751# vssd1 0.35fF $ **FLOATING
+C75 a_2557_8751# vssd1 0.41fF $ **FLOATING
+C76 a_2997_9001# vssd1 0.14fF $ **FLOATING
+C77 a_2557_9001# vssd1 0.14fF $ **FLOATING
+C78 del1.delay_chain\[0\].inv2.A vssd1 2.68fF $ **FLOATING
+C79 a_2191_8725# vssd1 1.42fF $ **FLOATING
+C80 a_3104_9527# vssd1 0.53fF $ **FLOATING
+C81 a_1591_9295# vssd1 0.52fF $ **FLOATING
+C82 io_in[4] vssd1 1.29fF
+C83 a_9820_9991# vssd1 0.53fF $ **FLOATING
+C84 a_4167_9839# vssd1 0.53fF $ **FLOATING
+C85 a_2143_9839# vssd1 0.53fF $ **FLOATING
+C86 a_4477_10383# vssd1 0.38fF $ **FLOATING
+C87 a_3795_10383# vssd1 0.41fF $ **FLOATING
+C88 a_3713_10703# vssd1 0.87fF $ **FLOATING
+C89 a_9963_10927# vssd1 0.28fF $ **FLOATING
+C90 a_10791_10927# vssd1 0.53fF $ **FLOATING
+C91 a_5363_10927# vssd1 0.53fF $ **FLOATING
+C92 a_2143_11471# vssd1 0.53fF $ **FLOATING
+C93 a_9135_12015# vssd1 0.53fF $ **FLOATING
+C94 a_1591_12015# vssd1 0.52fF $ **FLOATING
+C95 io_in[5] vssd1 1.30fF
+C96 a_5179_12879# vssd1 0.28fF $ **FLOATING
+C97 _50_.X vssd1 6.96fF $ **FLOATING
+C98 a_3622_12675# vssd1 0.65fF $ **FLOATING
+C99 a_3431_12919# vssd1 0.48fF $ **FLOATING
+C100 a_2736_12791# vssd1 0.53fF $ **FLOATING
+C101 temp1.dac.vdac_single.einvp_batch\[0\].vref_18.HI vssd1 0.42fF $ **FLOATING
+C102 a_12120_13255# vssd1 0.53fF $ **FLOATING
+C103 a_7755_13103# vssd1 0.53fF $ **FLOATING
+C104 a_4075_13103# vssd1 0.53fF $ **FLOATING
+C105 temp1.dac.vdac_single.einvp_batch\[0\].vref_18.LO vssd1 1.45fF $ **FLOATING
+C106 temp1.dac.vdac_single.einvp_batch\[0\].pupd_19.LO vssd1 0.48fF $ **FLOATING
+C107 a_11844_13879# vssd1 0.53fF $ **FLOATING
+C108 temp1.dac.vdac_single.einvp_batch\[0\].pupd_19.HI vssd1 1.04fF $ **FLOATING
+C109 _52_.B vssd1 4.97fF $ **FLOATING
+C110 a_3472_13879# vssd1 0.53fF $ **FLOATING
+C111 a_4995_13647# vssd1 0.52fF $ **FLOATING
+C112 _53_.A vssd1 0.82fF $ **FLOATING
+C113 a_4199_13985# vssd1 0.56fF $ **FLOATING
+C114 temp1.dac.parallel_cells\[0\].vdac_batch.einvp_batch\[0\].vref.TE vssd1 2.14fF $ **FLOATING
+C115 a_9135_14191# vssd1 0.51fF $ **FLOATING
+C116 a_3983_14191# vssd1 0.55fF $ **FLOATING
+C117 a_5271_14197# vssd1 0.48fF $ **FLOATING
+C118 _48_.A vssd1 3.26fF $ **FLOATING
+C119 a_4431_14441# vssd1 0.38fF $ **FLOATING
+C120 _60_.Y vssd1 6.42fF $ **FLOATING
+C121 a_3983_14441# vssd1 0.38fF $ **FLOATING
+C122 input6.X vssd1 2.27fF $ **FLOATING
+C123 a_5462_14441# vssd1 0.65fF $ **FLOATING
+C124 a_3063_14191# vssd1 0.53fF $ **FLOATING
+C125 a_1591_14191# vssd1 0.52fF $ **FLOATING
+C126 io_in[6] vssd1 1.35fF
+C127 a_10280_14967# vssd1 0.53fF $ **FLOATING
+C128 a_6835_14735# vssd1 0.53fF $ **FLOATING
+C129 a_4259_14735# vssd1 0.53fF $ **FLOATING
+C130 a_2743_14954# vssd1 0.52fF $ **FLOATING
+C131 temp1.capload\[9\].cap_17.HI vssd1 0.42fF $ **FLOATING
+C132 temp1.capload\[7\].cap.Z vssd1 0.29fF $ **FLOATING
+C133 a_5772_15431# vssd1 0.53fF $ **FLOATING
+C134 temp1.capload\[9\].cap.Z vssd1 0.29fF $ **FLOATING
+C135 del1.delay_chain\[1\].inv1.Y vssd1 1.86fF $ **FLOATING
+C136 temp1.capload\[9\].cap.TE vssd1 1.24fF $ **FLOATING
+C137 a_4208_15431# vssd1 0.53fF $ **FLOATING
+C138 del1.delay_chain\[1\].inv1.A vssd1 3.82fF $ **FLOATING
+C139 a_1591_15279# vssd1 0.52fF $ **FLOATING
+C140 io_in[7] vssd1 1.38fF
+C141 a_7331_15823# vssd1 0.41fF $ **FLOATING
+C142 a_6649_15823# vssd1 0.38fF $ **FLOATING
+C143 a_10924_16055# vssd1 0.53fF $ **FLOATING
+C144 a_6567_16143# vssd1 0.87fF $ **FLOATING
+C145 a_4932_16143# vssd1 0.22fF $ **FLOATING
+C146 a_4841_16143# vssd1 0.12fF $ **FLOATING
+C147 a_4024_16055# vssd1 0.53fF $ **FLOATING
+C148 _66_.Y vssd1 6.18fF $ **FLOATING
+C149 a_2419_16143# vssd1 0.18fF $ **FLOATING
+C150 temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.TE vssd1 5.19fF $ **FLOATING
+C151 a_4743_15823# vssd1 0.87fF $ **FLOATING
+C152 temp1.dac.parallel_cells\[1\].vdac_batch.einvp_batch\[0\].pupd.A vssd1 8.39fF $ **FLOATING
+C153 _62_.Y vssd1 9.49fF $ **FLOATING
+C154 del1.delay_chain\[2\].inv1.A vssd1 1.89fF $ **FLOATING
+C155 temp1.capload\[7\].cap_15.HI vssd1 0.42fF $ **FLOATING
+C156 a_11201_16367# vssd1 1.33fF $ **FLOATING
+C157 del2.delay_chain\[0\].inv1.A vssd1 3.90fF $ **FLOATING
+C158 a_4713_16367# vssd1 0.17fF $ **FLOATING
+C159 temp1.capload\[7\].cap_15.LO vssd1 1.74fF $ **FLOATING
+C160 temp1.capload\[5\].cap.Z vssd1 0.29fF $ **FLOATING
+C161 a_2611_16617# vssd1 0.44fF $ **FLOATING
+C162 a_5772_16519# vssd1 0.53fF $ **FLOATING
+C163 a_4495_16341# vssd1 0.55fF $ **FLOATING
+C164 a_1775_16367# vssd1 0.53fF $ **FLOATING
+C165 a_7663_16911# vssd1 0.53fF $ **FLOATING
+C166 temp1.capload\[5\].cap_13.HI vssd1 0.42fF $ **FLOATING
+C167 temp1.capload\[5\].cap_13.LO vssd1 1.52fF $ **FLOATING
+C168 a_4627_16911# vssd1 0.23fF $ **FLOATING
+C169 _37_.A vssd1 6.44fF $ **FLOATING
+C170 a_5280_17143# vssd1 0.54fF $ **FLOATING
+C171 a_4961_17143# vssd1 0.50fF $ **FLOATING
+C172 a_4774_16885# vssd1 0.58fF $ **FLOATING
+C173 a_4678_17143# vssd1 0.50fF $ **FLOATING
+C174 del1.delay_chain\[2\].inv2.A vssd1 1.67fF $ **FLOATING
+C175 del1.delay_chain\[2\].inv2.Y vssd1 0.86fF $ **FLOATING
+C176 del1.delay_chain\[3\].inv2.Y vssd1 3.71fF $ **FLOATING
+C177 del1.delay_chain\[3\].inv2.A vssd1 2.60fF $ **FLOATING
+C178 temp1.capload\[6\].cap_14.HI vssd1 0.42fF $ **FLOATING
+C179 a_4181_17455# vssd1 0.22fF $ **FLOATING
+C180 a_4097_17455# vssd1 0.12fF $ **FLOATING
+C181 a_1591_17455# vssd1 0.91fF $ **FLOATING
+C182 _54_.X vssd1 3.64fF $ **FLOATING
+C183 a_5179_17461# vssd1 0.48fF $ **FLOATING
+C184 _54_.A vssd1 3.22fF $ **FLOATING
+C185 _63_.X vssd1 10.07fF $ **FLOATING
+C186 a_5371_17705# vssd1 0.48fF $ **FLOATING
+C187 a_3994_17455# vssd1 0.99fF $ **FLOATING
+C188 _63_.A1 vssd1 11.50fF $ **FLOATING
+C189 _63_.B2 vssd1 6.36fF $ **FLOATING
+C190 a_6692_18231# vssd1 0.53fF $ **FLOATING
+C191 temp1.capload\[6\].cap.Z vssd1 0.29fF $ **FLOATING
+C192 a_5772_18231# vssd1 0.53fF $ **FLOATING
+C193 a_4893_18319# vssd1 0.18fF $ **FLOATING
+C194 _38_.Y vssd1 7.39fF $ **FLOATING
+C195 _43_.X vssd1 13.74fF $ **FLOATING
+C196 temp1.capload\[6\].cap.TE vssd1 1.56fF $ **FLOATING
+C197 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.TE vssd1 17.21fF $ **FLOATING
+C198 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[0\].pupd.A vssd1 19.37fF $ **FLOATING
+C199 _38_.A1 vssd1 11.72fF $ **FLOATING
+C200 _38_.B1 vssd1 9.55fF $ **FLOATING
+C201 a_3971_17973# vssd1 0.99fF $ **FLOATING
+C202 del2.delay_chain\[0\].inv2.A vssd1 4.57fF $ **FLOATING
+C203 del2.delay_chain\[1\].inv1.A vssd1 0.80fF $ **FLOATING
+C204 _35_.Y vssd1 7.09fF $ **FLOATING
+C205 _34_.B vssd1 3.28fF $ **FLOATING
+C206 a_3995_18793# vssd1 0.64fF $ **FLOATING
+C207 temp1.dcdc.A vssd1 2.32fF $ **FLOATING
+C208 a_2143_18543# vssd1 0.53fF $ **FLOATING
+C209 temp1.capload\[2\].cap_10.HI vssd1 0.42fF $ **FLOATING
+C210 a_4944_19319# vssd1 0.53fF $ **FLOATING
+C211 temp1.capload\[2\].cap.Z vssd1 0.29fF $ **FLOATING
+C212 _59_.X vssd1 3.65fF $ **FLOATING
+C213 a_3828_19407# vssd1 0.22fF $ **FLOATING
+C214 a_3737_19407# vssd1 0.12fF $ **FLOATING
+C215 _69_.Y vssd1 7.08fF $ **FLOATING
+C216 temp1.capload\[2\].cap_10.LO vssd1 1.24fF $ **FLOATING
+C217 a_3639_19087# vssd1 0.87fF $ **FLOATING
+C218 _59_.A1 vssd1 8.04fF $ **FLOATING
+C219 _59_.A2 vssd1 17.19fF $ **FLOATING
+C220 _59_.B1 vssd1 16.98fF $ **FLOATING
+C221 _69_.A vssd1 4.65fF $ **FLOATING
+C222 a_6511_19611# vssd1 0.43fF $ **FLOATING
+C223 _42_.B vssd1 4.50fF $ **FLOATING
+C224 _42_.X vssd1 2.02fF $ **FLOATING
+C225 temp1.capload\[8\].cap.Z vssd1 0.29fF $ **FLOATING
+C226 del2.delay_chain\[3\].inv1.Y vssd1 6.31fF $ **FLOATING
+C227 a_6239_19783# vssd1 0.67fF $ **FLOATING
+C228 a_4852_19783# vssd1 0.53fF $ **FLOATING
+C229 del2.delay_chain\[1\].inv2.A vssd1 1.98fF $ **FLOATING
+C230 temp1.inv2.A vssd1 1.18fF $ **FLOATING
+C231 del2.delay_chain\[2\].inv2.Y vssd1 0.80fF $ **FLOATING
+C232 temp1.capload\[8\].cap_16.HI vssd1 0.42fF $ **FLOATING
+C233 temp1.capload\[8\].cap_16.LO vssd1 1.28fF $ **FLOATING
+C234 temp1.capload\[1\].cap.Z vssd1 0.29fF $ **FLOATING
+C235 a_4259_20175# vssd1 0.53fF $ **FLOATING
+C236 temp1.capload\[1\].cap.TE vssd1 1.24fF $ **FLOATING
+C237 temp1.capload\[1\].cap_9.HI vssd1 0.42fF $ **FLOATING
+C238 a_2235_20175# vssd1 0.53fF $ **FLOATING
+C239 _41_.Y vssd1 10.54fF $ **FLOATING
+C240 _41_.A vssd1 10.75fF $ **FLOATING
+C241 temp1.capload\[4\].cap.Z vssd1 0.29fF $ **FLOATING
+C242 _58_.A vssd1 14.16fF $ **FLOATING
+C243 _58_.X vssd1 7.82fF $ **FLOATING
+C244 _46_.X vssd1 9.05fF $ **FLOATING
+C245 a_1683_20725# vssd1 0.48fF $ **FLOATING
+C246 _46_.A vssd1 5.69fF $ **FLOATING
+C247 a_4995_20719# vssd1 0.53fF $ **FLOATING
+C248 a_3983_20719# vssd1 0.53fF $ **FLOATING
+C249 a_2750_20693# vssd1 0.64fF $ **FLOATING
+C250 a_1874_20969# vssd1 0.65fF $ **FLOATING
+C251 temp1.capload\[4\].cap_12.LO vssd1 1.32fF $ **FLOATING
+C252 a_5271_21263# vssd1 0.53fF $ **FLOATING
+C253 temp1.capload\[4\].cap_12.HI vssd1 0.42fF $ **FLOATING
+C254 _68_.X vssd1 7.70fF $ **FLOATING
+C255 io_out[0] vssd1 3.51fF
+C256 a_2695_21263# vssd1 0.52fF $ **FLOATING
+C257 _68_.A vssd1 3.18fF $ **FLOATING
+C258 a_1591_21271# vssd1 0.65fF $ **FLOATING
+C259 io_out[3] vssd1 9.40fF
+C260 temp1.capload\[3\].cap.Z vssd1 0.29fF $ **FLOATING
+C261 a_3104_21959# vssd1 0.53fF $ **FLOATING
+C262 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.Z vssd1 45.69fF $ **FLOATING
+C263 a_1683_21807# vssd1 0.53fF $ **FLOATING
+C264 temp1.dac.parallel_cells\[3\].vdac_batch.einvp_batch\[5\].vref.TE vssd1 15.00fF $ **FLOATING
+C265 temp1.capload\[3\].cap_11.HI vssd1 0.42fF $ **FLOATING
+C266 temp1.capload\[3\].cap_11.LO vssd1 1.32fF $ **FLOATING
+C267 hpretl_tt03_temperature_sensor_20.LO vssd1 0.48fF $ **FLOATING
+C268 a_2552_22583# vssd1 0.53fF $ **FLOATING
+C269 temp1.capload\[0\].cap.Z vssd1 0.29fF $ **FLOATING
+C270 temp1.capload\[0\].cap.A vssd1 11.41fF $ **FLOATING
+C271 io_out[1] vssd1 3.28fF
+C272 temp1.capload\[0\].cap.TE vssd1 1.38fF $ **FLOATING
+C273 temp1.capload\[0\].cap_8.HI vssd1 0.42fF $ **FLOATING
+C274 _44_.X vssd1 9.88fF $ **FLOATING
+C275 a_4267_23555# vssd1 0.48fF $ **FLOATING
+C276 _44_.A vssd1 8.20fF $ **FLOATING
+C277 a_4075_23799# vssd1 0.48fF $ **FLOATING
+C278 _44_.B_N vssd1 20.18fF $ **FLOATING
+C279 del2.delay_chain\[2\].inv1.Y vssd1 3.01fF $ **FLOATING
+C280 del2.delay_chain\[2\].inv1.A vssd1 3.73fF $ **FLOATING
+C281 io_out[7] vssd1 3.96fF
+C282 _91_.A vssd1 3.77fF $ **FLOATING
+C283 a_2012_26677# vssd1 0.65fF $ **FLOATING
+C284 vccd1 vssd1 4381.02fF
+.ends

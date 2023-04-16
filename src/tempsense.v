@@ -16,11 +16,14 @@
 `define __TEMPSENSE__
 
 `default_nettype none
+`timescale 1ns/1ps
+`ifndef SIMULATION
 `include "vdac.v"
+`endif
 //`include "/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v"
 //`include "/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v"
 
-module tempsense #( parameter DAC_RESOLUTION = 6 )(
+module tempsense #( parameter DAC_RESOLUTION = 6, parameter CAP_LOAD = 3 )(
       input wire [DAC_RESOLUTION-1:0]     i_dac_data,
       input wire                          i_dac_en,
       input wire                          i_precharge_n,
@@ -28,7 +31,9 @@ module tempsense #( parameter DAC_RESOLUTION = 6 )(
   );
 
 `ifdef SIMULATION
-      wire precharge_del;
+      integer capstate;
+      
+      wire precharge_del_n;
       assign #300 precharge_del_n = i_precharge_n;
       assign o_tempdelay = i_dac_en & (~precharge_del_n);
 `else
@@ -44,10 +49,20 @@ module tempsense #( parameter DAC_RESOLUTION = 6 )(
       wire dcdel_capnode_ana_;
       wire dcdel_out;
       wire dcdel_out_n;
+      wire tie0 = 1'b0;
+      (* keep = "true" *) wire [0:CAP_LOAD-1] dummy_ana_;
+
       sky130_fd_sc_hd__einvp_1 dcdc (.A(i_precharge_n), .TE(dac_vout_ana_), .Z(dcdel_capnode_ana_));
-      sky130_fd_sc_hd__inv_12 inv1 (.A(dcdel_capnode_ana_),.Y(dcdel_out));
-      sky130_fd_sc_hd__inv_1  inv2 (.A(dcdel_out),.Y(dcdel_out_n));
-      sky130_fd_sc_hd__inv_2  inv3 (.A(dcdel_out_n),.Y(o_tempdelay));
+      
+      sky130_fd_sc_hd__inv_1 inv1 (.A(dcdel_capnode_ana_),.Y(dcdel_out_n));
+      sky130_fd_sc_hd__inv_1 inv2 (.A(dcdel_out_n),.Y(o_tempdelay));
+
+      genvar i;
+	generate
+		for (i=0; i < CAP_LOAD; i=i+1) begin : capload
+			(* keep = "true" *) sky130_fd_sc_hd__einvp_1 cap (.A(dcdel_capnode_ana_), .TE(tie0), .Z(dummy_ana_[i]));
+		end
+  	endgenerate
 `endif
 
 endmodule // tempsense
