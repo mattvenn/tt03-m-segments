@@ -23,7 +23,7 @@
 //`include "/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v"
 //`include "/foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v"
 
-module tempsense #( parameter DAC_RESOLUTION = 6, parameter CAP_LOAD = 3 )(
+module tempsense #( parameter DAC_RESOLUTION = 6, parameter CAP_LOAD = 4 )(
       input wire [DAC_RESOLUTION-1:0]     i_dac_data,
       input wire                          i_dac_en,
       input wire                          i_precharge_n,
@@ -40,29 +40,28 @@ module tempsense #( parameter DAC_RESOLUTION = 6, parameter CAP_LOAD = 3 )(
       assign o_tempdelay = ~(i_dac_en & dac_change & i_precharge_n);
 `else
       // Voltage-mode digital-to-analog converter (VDAC)
-      wire dac_vout_ana_;
-      vdac #(.BITWIDTH(DAC_RESOLUTION)) dac (
+      (* keep = "true" *) wire dac_vout_ana_;
+      (* keep = "true" *) vdac #(.BITWIDTH(DAC_RESOLUTION)) dac (
             .i_data(i_dac_data),
             .i_enable(i_dac_en),
             .vout_ana_(dac_vout_ana_)
       );
 
       // Digitally-controled delay cell (dcdel)
-      wire dcdel_capnode_ana_;
-      wire dcdel_out;
-      wire dcdel_out_n;
       wire tie0 = 1'b0;
+      (* keep = "true" *) wire dcdel_capnode_ana_;
+      (* keep = "true" *) wire dcdel_out;
+      (* keep = "true" *) wire dcdel_out_n;
       (* keep = "true" *) wire [0:CAP_LOAD-1] dummy_ana_;
 
-      sky130_fd_sc_hd__einvp_1 dcdc (.A(i_precharge_n), .TE(dac_vout_ana_), .Z(dcdel_capnode_ana_));
-      
-      sky130_fd_sc_hd__inv_1 inv1 (.A(dcdel_capnode_ana_),.Y(dcdel_out_n));
-      sky130_fd_sc_hd__inv_1 inv2 (.A(dcdel_out_n),.Y(o_tempdelay));
+      (* keep = "true" *) sky130_fd_sc_hd__einvp_1 dcdc (.A(i_precharge_n), .TE(dac_vout_ana_), .Z(dcdel_capnode_ana_));
+      (* keep = "true" *) sky130_fd_sc_hd__inv_1 inv1 (.A(dcdel_capnode_ana_),.Y(dcdel_out_n));
+      (* keep = "true" *) sky130_fd_sc_hd__inv_1 inv2 (.A(dcdel_out_n),.Y(o_tempdelay));
 
       genvar i;
 	generate
 		for (i=0; i < CAP_LOAD; i=i+1) begin : capload
-			(* keep = "true" *) sky130_fd_sc_hd__einvp_1 cap (.A(dcdel_capnode_ana_), .TE(tie0), .Z(dummy_ana_[i]));
+			(* keep = "true" *) sky130_fd_sc_hd__nand2_1 cap (.B(dcdel_capnode_ana_), .A(tie0), .Y(dummy_ana_[i]));
 		end
   	endgenerate
 `endif
