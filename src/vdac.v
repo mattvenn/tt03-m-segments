@@ -34,7 +34,7 @@ module vdac #(parameter BITWIDTH = 6) (
 	genvar i;
 	generate 
 		for (i = 0; i<BITWIDTH-1; i=i+1) begin : parallel_cells
-			vdac_cell #(.PARALLEL_CELLS(2**i)) vdac_batch (
+			(* keep = "true" *) vdac_cell #(.PARALLEL_CELLS(2**i)) vdac_batch (
 				.i_sign(i_data[BITWIDTH-1]),
 				.i_data(i_data[i]),
 				.i_enable(i_enable),
@@ -44,7 +44,7 @@ module vdac #(parameter BITWIDTH = 6) (
 	endgenerate
   
 	// Single cell for transition from 011..11 to 100..00
-	vdac_cell #(.PARALLEL_CELLS(1)) vdac_single (
+	(* keep = "true" *) vdac_cell #(.PARALLEL_CELLS(1)) vdac_single (
 		.i_sign(1'b0),
 		.i_data(1'b0),
 		.i_enable(i_enable & (~i_data[BITWIDTH-1])),
